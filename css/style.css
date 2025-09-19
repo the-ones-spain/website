@@ -59,6 +59,13 @@
 .bg-img-SINGLE {
 }
 
+/* Force left alignment for the '03. the possibilities' section header and its container */
+#possibilities, #possibilities * {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
 
 /* 1.2. testimonials IMG BACKGROUND */
 .bg-photo.testimonials {
@@ -1489,21 +1496,17 @@ height: 100%;
 .logo {
 position: absolute;
 display: inline-block;
-top: 50px;
-left: 50px;
+top: 65px;
+left: 2px;
 line-height: 0;
-        opacity: 1;
-   -moz-opacity: 1;
--webkit-opacity: 1;
-filter: alpha(opacity=100);
--ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
--webkit-transition: all .3s ease-in-out;
-   -moz-transition: all .3s ease-in-out;
-	-ms-transition: all .3s ease-in-out;
-     -o-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;
+opacity: 1;
+transition: all .3s ease-in-out;
 cursor: pointer;
 z-index: 150;
+/* Ensure logo is vertically aligned with the 3-dot navigation */
+height: 72px;
+display: flex;
+align-items: center;
 }
 
 @media only screen and (max-width: 880px) {
@@ -1516,8 +1519,8 @@ z-index: 150;
 .logo-img::before {
 content: "";
 display: block;
-width: 57px;
-height: 34px;
+width: 75px;
+height: 48px;
 line-height: 34px;
 -webkit-transition: all .3s ease-in-out;
    -moz-transition: all .3s ease-in-out;
