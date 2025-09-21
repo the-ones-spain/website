@@ -710,48 +710,74 @@ background: none;
 overflow: hidden;
 }
 
+.works-section.section-gallery {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.works-section-col {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .works-section-col {
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .works-section.section-gallery .works-section-gallery-box {
+        width: 100%;
+    }
+
+    .works-section.section-gallery .works-section-gallery-box.img-1,
+    .works-section.section-gallery .works-section-gallery-box.img-2,
+    .works-section.section-gallery .works-section-gallery-box.img-4,
+    .works-section.section-gallery .works-section-gallery-box.img-5 {
+        min-width: 50%;
+    }
+}
+
+.works-section-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Common styles for all gallery boxes */
 .works-section.section-gallery .works-section-gallery-box {
-position: absolute;
-top: 0;
-left: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.works-section.section-gallery .works-section-gallery-box.img-1 {
-width: 20%;
-height: 40%;
-padding: 0 10px 10px 0;
-}
-
-.works-section.section-gallery .works-section-gallery-box.img-2 {
-left: 20%;
-width: 20%;
-height: 40%;
-padding: 0 10px 10px 10px;
-}
-
+/* Single row item (middle) */
 .works-section.section-gallery .works-section-gallery-box.img-3 {
-top: 40%;
-width: 40%;
-height: 60%;
-padding: 10px 10px 0 0;
+    grid-column: 1 / -1;
 }
 
-.works-section.section-gallery .works-section-gallery-box.img-4 {
-left: 40%;
-width: 40%;
-height: 60%;
-padding: 0 10px 10px 10px;
-}
+/* All other items will naturally fall into the 2-column grid */
 
-.works-section.section-gallery .works-section-gallery-box.img-5 {
-top: 60%;
-left: 40%;
-width: 20%;
-height: 40%;
-padding: 10px 10px 0 10px;
-}
-
-.works-section.section-gallery .works-section-gallery-box.img-6 {
+@media (max-width: 600px) {
+    .works-section-col {
+        grid-template-columns: 1fr;
+    }
+    
+    .works-section.section-gallery .works-section-gallery-box {
+        grid-column: 1 / -1;
+    }
+}.works-section.section-gallery .works-section-gallery-box.img-6 {
 top: 60%;
 left: 60%;
 width: 20%;
@@ -774,7 +800,7 @@ height: 50%;
 padding: 10px 0 0 10px;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   .works-section.section-gallery {
     height: auto;
     padding: 0!important;
@@ -1230,6 +1256,7 @@ width: 100%;
 height: 100%;
 background-repeat: no-repeat;
 background-position: center center;
+background-size: cover;
 -webkit-background-size: cover;
    -moz-background-size: cover;
     -ms-background-size: cover;
