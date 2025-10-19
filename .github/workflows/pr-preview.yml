@@ -1,0 +1,120 @@
+name: Deploy PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+# Sets permissions of the GITHUB_TOKEN
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr-content
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+        continue-on-error: true
+
+      - name: Initialize gh-pages branch if it doesn't exist
+        run: |
+          if [ ! -d "gh-pages/.git" ]; then
+            echo "Creating gh-pages branch..."
+            mkdir -p gh-pages
+            cd gh-pages
+            git init
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git checkout -b gh-pages
+            echo "# GitHub Pages" > README.md
+            git add README.md
+            git commit -m "Initialize gh-pages branch"
+            git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+            git push -u origin gh-pages
+          fi
+
+      - name: Configure git
+        run: |
+          cd gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy preview
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          PREVIEW_DIR="gh-pages/preview/pr-${PR_NUMBER}"
+          
+          # Remove old preview if exists
+          rm -rf "${PREVIEW_DIR}"
+          
+          # Create preview directory
+          mkdir -p "${PREVIEW_DIR}"
+          
+          # Copy PR content to preview directory
+          cp -r pr-content/* "${PREVIEW_DIR}/"
+          
+          # Remove .git directory from preview
+          rm -rf "${PREVIEW_DIR}/.git"
+          rm -rf "${PREVIEW_DIR}/.github"
+          
+          cd gh-pages
+          git add .
+          git commit -m "Deploy preview for PR #${PR_NUMBER}" || echo "No changes to commit"
+          git push origin gh-pages
+
+      - name: Comment PR with preview URL
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const repoName = context.repo.repo;
+            const owner = context.repo.owner;
+            const previewUrl = `https://${owner}.github.io/${repoName}/preview/pr-${prNumber}/`;
+            
+            const comment = `## 🚀 Preview Deployed
+            
+            Your preview is ready! Check it out at:
+            
+            **${previewUrl}**
+            
+            This preview will be updated automatically when you push new commits to this PR.`;
+            
+            // Find existing preview comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: owner,
+              repo: repoName,
+              issue_number: prNumber,
+            });
+            
+            const botComment = comments.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('Preview Deployed')
+            );
+            
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: owner,
+                repo: repoName,
+                comment_id: botComment.id,
+                body: comment
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: owner,
+                repo: repoName,
+                issue_number: prNumber,
+                body: comment
+              });
+            }
