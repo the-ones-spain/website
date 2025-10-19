@@ -23,12 +23,14 @@
   }
 
   /* Ensure video elements fill width with proper cropping and limited height */
+  /* 45vh chosen to prevent tall gaps on small phones while maintaining visibility */
   .upper-page video,
   #page-home video,
   .hero-fullscreen video,
   .hero-bg video,
   .swiper-slide-inner-bg video,
-  video {
+  .swiper-slide video,
+  .hero video {
     width: 100% !important;
     height: auto !important;
     max-height: 45vh !important;
