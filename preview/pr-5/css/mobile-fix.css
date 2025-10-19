@@ -47,18 +47,11 @@
   }
 
   /* Ensure video maintains aspect ratio and doesn't create gaps */
-  .swiper-slide-inner-bg video,
-  video {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    object-fit: contain !important;
-  }
-
-  /* Fallback: target first video element directly if above doesn't work */
-  .upper-page video:first-of-type,
-  #page-home video:first-of-type {
+  .upper-page video,
+  #page-home video,
+  .hero-fullscreen video,
+  .hero-bg video,
+  .swiper-slide-inner-bg video {
     position: relative !important;
     width: 100% !important;
     height: auto !important;
