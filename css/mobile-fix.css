@@ -1,67 +1,101 @@
-/* Mobile-specific fixes for hero video section */
-/* Targets narrow viewports (mobile devices) to prevent black background gaps below video */
+/* Mobile-specific fixes for hero video section and post cards */
+/* Targets narrow viewports (mobile devices, max-width: 767px) to prevent black/grey background gaps */
 
-@media only screen and (max-width: 768px) {
-  /* Force hero containers to be transparent and size to content */
-  .upper-page {
-    min-height: auto !important;
-    height: auto !important;
-    background: transparent !important;
-  }
-
+@media only screen and (max-width: 767px) {
+  /* Force hero and video containers to be transparent and size to content */
+  .upper-page,
   .hero,
   .hero-fullscreen,
-  .hero-fullscreen-FIX {
-    position: relative !important;
-    height: auto !important;
-    min-height: auto !important;
-    background: transparent !important;
-  }
-
-  .hero-bg {
-    position: relative !important;
-    height: auto !important;
-    min-height: auto !important;
-    background: transparent !important;
-  }
-
-  /* Fix video wrapper containers */
+  .hero-fullscreen-FIX,
+  .hero-bg,
   .swiper-container-wrapper,
-  .swiper-container {
-    height: auto !important;
-    min-height: auto !important;
-    position: relative !important;
-  }
-
+  .swiper-container,
   .swiper-wrapper,
-  .swiper-slide {
-    height: auto !important;
-    min-height: auto !important;
-  }
-
+  .swiper-slide,
   .swiper-slide-inner,
   .swiper-slide-inner-bg {
-    position: relative !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    min-height: 0 !important;
     height: auto !important;
-    min-height: auto !important;
+    overflow: visible !important;
+    position: relative !important;
   }
 
-  /* Ensure video maintains aspect ratio and doesn't create gaps */
+  /* Ensure video elements fill width with proper cropping and limited height */
   .upper-page video,
   #page-home video,
   .hero-fullscreen video,
   .hero-bg video,
-  .swiper-slide-inner-bg video {
-    position: relative !important;
+  .swiper-slide-inner-bg video,
+  video {
     width: 100% !important;
     height: auto !important;
+    max-height: 45vh !important;
+    object-fit: cover !important;
     display: block !important;
-    object-fit: contain !important;
+    position: relative !important;
   }
 
-  /* Remove any overlay effects on mobile that might show as black */
+  /* Make post/card containers transparent and auto-height */
+  .post-box,
+  .post-thumb,
+  .post-placeholder,
+  .post-card,
+  .post-overlay,
+  .portfolio-item,
+  .works-item,
+  .post-media,
+  .post-image,
+  .post-video,
+  .img-wrap,
+  .carousel-item-img-wrapper {
+    background: transparent !important;
+    background-color: transparent !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Remove pseudo-element decorations and overlays that create visual bands */
+  .post-box::after,
+  .post-box::before,
+  .post-thumb::before,
+  .post-thumb::after,
+  .overlay::before,
+  .overlay::after,
+  .video-overlay,
+  .post-box .overlay,
   .upper-page .overlay::before,
   #page-home .overlay::before {
     display: none !important;
+    opacity: 0 !important;
+  }
+
+  /* Hide debugging size labels and placeholders */
+  .size-label,
+  .placeholder,
+  .img-placeholder {
+    display: none !important;
+    opacity: 0 !important;
+  }
+
+  /* Reduce bottom margins/padding on post cards to avoid stacked empty gaps */
+  .post-box,
+  .post-card,
+  .portfolio-item,
+  .works-item {
+    margin-bottom: 1rem !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Ensure images within post boxes don't create excessive height */
+  .post-box img,
+  .post-card img,
+  .portfolio-item img,
+  .works-item img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
   }
 }
