@@ -28,8 +28,9 @@ jobs:
 
       - name: Initialize gh-pages branch if it doesn't exist
         run: |
-          if [ ! -d "gh-pages/.git" ]; then
+          if [ ! -d "gh-pages/.git" ] || [ ! -f "gh-pages/.git/config" ]; then
             echo "Creating gh-pages branch..."
+            rm -rf gh-pages
             mkdir -p gh-pages
             cd gh-pages
             git init
@@ -60,8 +61,8 @@ jobs:
           # Create preview directory
           mkdir -p "${PREVIEW_DIR}"
           
-          # Copy PR content to preview directory
-          cp -r pr-content/* "${PREVIEW_DIR}/"
+          # Copy PR content to preview directory (including hidden files)
+          cp -r pr-content/. "${PREVIEW_DIR}/"
           
           # Remove .git directory from preview
           rm -rf "${PREVIEW_DIR}/.git"

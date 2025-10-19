@@ -28,6 +28,12 @@ jobs:
 
       - name: Remove preview
         run: |
+          # Check if gh-pages directory exists and is a valid git repo
+          if [ ! -d "gh-pages/.git" ]; then
+            echo "gh-pages branch not found or not checked out properly. Skipping cleanup."
+            exit 0
+          fi
+          
           PR_NUMBER=${{ github.event.pull_request.number }}
           PREVIEW_DIR="gh-pages/preview/pr-${PR_NUMBER}"
           
