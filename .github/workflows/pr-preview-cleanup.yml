@@ -1,0 +1,69 @@
+name: Cleanup PR Preview
+
+on:
+  pull_request:
+    types: [closed]
+
+# Sets permissions of the GITHUB_TOKEN
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  cleanup-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+        continue-on-error: true
+
+      - name: Configure git
+        run: |
+          cd gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Remove preview
+        run: |
+          # Check if gh-pages directory exists and is a valid git repo
+          if [ ! -d "gh-pages/.git" ]; then
+            echo "gh-pages branch not found or not checked out properly. Skipping cleanup."
+            exit 0
+          fi
+          
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          PREVIEW_DIR="gh-pages/preview/pr-${PR_NUMBER}"
+          
+          if [ -d "${PREVIEW_DIR}" ]; then
+            echo "Removing preview directory: ${PREVIEW_DIR}"
+            rm -rf "${PREVIEW_DIR}"
+            
+            cd gh-pages
+            git add .
+            git commit -m "Remove preview for closed PR #${PR_NUMBER}" || echo "No changes to commit"
+            git push origin gh-pages
+          else
+            echo "Preview directory does not exist: ${PREVIEW_DIR}"
+          fi
+
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const repoName = context.repo.repo;
+            const owner = context.repo.owner;
+            
+            const comment = `## 🧹 Preview Cleaned Up
+            
+            The preview for this PR has been removed from GitHub Pages.`;
+            
+            await github.rest.issues.createComment({
+              owner: owner,
+              repo: repoName,
+              issue_number: prNumber,
+              body: comment
+            });
