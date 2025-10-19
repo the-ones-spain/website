@@ -69,9 +69,22 @@ jobs:
           rm -rf "${PREVIEW_DIR}/.github"
           
           cd gh-pages
+
+          # ensure pushes use the GITHUB_TOKEN
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+          # fetch latest remote branch (ignore errors if branch doesn't exist)
+          git fetch origin gh-pages || true
+
+          # stage and commit the preview files
           git add .
           git commit -m "Deploy preview for PR #${PR_NUMBER}" || echo "No changes to commit"
-          git push origin gh-pages
+
+          # rebase local changes on top of remote to avoid non-fast-forward
+          git pull --rebase origin gh-pages || true
+
+          # push, using --force-with-lease if necessary (safer than --force)
+          git push origin gh-pages --force-with-lease
 
       - name: Comment PR with preview URL
         uses: actions/github-script@v7
