@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        The Ones - not an agency. not a studio. not a company.
+    </title>
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <!-- ex nihilo || September 2024 -->
+    <!-- favicon start -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <!-- favicon end -->
+    <!-- style start -->
+    <link href="css/plugins.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/mobile-fix.css" media="all" rel="stylesheet" type="text/css">
+    <!-- style end -->
+    <!-- google fonts start -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7COswald:300,400,700"
+        rel="stylesheet" type="text/css">
+    <!-- google fonts end -->
+</head>
+
+<body>
+    <!-- DEVELOPMENT banner start -->
+    <div id="dev-banner" style="position:fixed;top:0;left:0;right:0;background:#c0392b;color:#ffffff;text-align:center;font-weight:700;padding:10px 12px;z-index:99999;font-family:inherit;">
+        DEVELOPMENT
+    </div>
+    <script>
+        (function() {
+            function adjustBodyPadding() {
+                var b = document.getElementById('dev-banner');
+                if (!b) return;
+                // set body padding-top to banner height (px)
+                document.body.style.paddingTop = b.offsetHeight + 'px';
+            }
+            window.addEventListener('load', adjustBodyPadding);
+            window.addEventListener('resize', adjustBodyPadding);
+            // fallback in case of late font/image load
+            setTimeout(adjustBodyPadding, 100);
+        })();
+    </script>
+    <!-- DEVELOPMENT banner end -->
+
+    <!-- preloader start -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+    <!-- logo start -->
+    <a class="logo" href="#">
+        <img src="img/ones.png" alt="Logo" style="width:240px; height:auto;">
+    </a>
+    <!-- logo end -->
+    <!-- navigation start -->
+    <!-- navigation button start -->
+    <div class="round-menu-wrapper">
+        <div class="round-menu navigation-fire">
+            <span class="dot-1"></span><span class="dot-2"></span><span class="dot-3"></span>
+        </div>
+    </div>
+    <!-- navigation button end -->
+    <!-- navigation panel left start -->
+    <div class="panel-overlay-from-left">
+    </div>
+    <!-- navigation panel left end -->
+    <!-- navigation panel right start -->
+    <div class="panel-from-right">
+        <!-- navigation links start -->
+        <nav class="navigation-menu">
+            <!-- dots start -->
+            <div class="dots dots-wider">
+                <div class="the-dots the-dots-home the-dots-menu"></div>
+            </div>
+            <div class="dots-reverse dots-reverse-wider">
+                <div class="the-dots the-dots-home the-dots-menu"></div>
+            </div>
+            <!-- dots end -->
+            <!-- center container start -->
+            <div class="center-container-menu">
+                <!-- center block start -->
+                <div class="center-block-menu">
+                    <ul class="menu">
+                        <li>
+                            <a class="navigation-state" href="#page-services">Services</a>
+                        </li>
+                        <li>
+                            <a class="navigation-state" href="#page-news">News</a>
+                        </li>
+                        <li>
+                            <a class="navigation-state" href="#page-works">Works</a>
+                        </li>
+                        <li>
+                            <a class="navigation-state" href="#page-contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- center block end -->
+            </div>
+            <!-- center container end -->
+        </nav>
+        <!-- navigation links end -->
+    </div>
+    <!-- navigation panel right end -->
+    <!-- navigation end -->
+    <!-- page home start -->
+    <!-- hero bg start -->
+    <div class="upper-page" id="page-home">
+        <!-- dots start -->
+        <div class="dots dots-wider">
+            <div class="the-dots the-dots-home"></div>
+        </div>
+        <div class="dots-reverse dots-reverse-wider">
+            <div class="the-dots the-dots-home"></div>
+        </div>
+        <!-- dots end -->
+        <!-- center container start -->
+
+        <!-- center container end -->
+        <!-- scroll indicator start -->
+        <div class="scroll-indicator">
+            <div class="scroll-indicator-wrapper">
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+        <!-- scroll indicator end -->
+        <div class="hero-fullscreen">
+            <div class="hero-fullscreen-FIX">
+                <div class="hero-bg">
+                    <!-- hero slider wrapper start -->
+                    <div class="swiper-container-wrapper">
+                        <!-- swiper container start -->
+                        <div class="swiper-container swiper1">
+                            <!-- swiper wrapper start -->
+                            <div class="swiper-wrapper">
+                                <!-- swiper slider item start -->
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inner" data-swiper-parallax="50%">
+                                        <!-- swiper slider item IMG start -->
+                                        <div class="swiper-slide-inner-bg overlay" style="position:relative;">
+                                            <!-- HTML5 video URL start -->
+                                            <video playsinline autoplay muted loop
+                                                style="width:100%;height:auto;display:block;">
+                                                <source src="media/video/video.mp4" type="video/mp4">
+                                            </video>
+                                            <!-- HTML5 video URL end -->
+                                            <div id="floating-footer"
+                                                style="position:absolute;right:2.5%;bottom:2.5%;background:transparent;color:#fff;padding:0;font-size:1.1rem;font-family:inherit;text-align:right;z-index:99999;">
+                                                <span id="footer-date"></span> | <span id="footer-time"></span> | <span
+                                                    id="footer-location">Barcelona</span>
+                                            </div>
+                                            <script>
+                                                // Set date and time in the floating footer
+                                                function updateFooterDateTime() {
+                                                    const now = new Date();
+                                                    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+                                                    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+                                                    document.getElementById('footer-date').textContent = now.toLocaleDateString('en-GB', dateOptions);
+                                                    document.getElementById('footer-time').textContent = now.toLocaleTimeString('en-GB', timeOptions);
+                                                }
+                                                updateFooterDateTime();
+                                                setInterval(updateFooterDateTime, 1000);
+                                            </script>
+                                        </div>
+                                        <!-- swiper slider item IMG end -->
+                                    </div>
+                                </div>
+                                <!-- swiper slider item end -->
+                            </div>
+                            <!-- swiper wrapper end -->
+                        </div>
+                        <!-- swiper container end -->
+                    </div>
+                    <!-- hero slider wrapper end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hero bg end -->
+    <!-- page home end -->
+    <!-- front page intro text start -->
+    <div class="lower-page bg-color-1" id="page-about">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-lg-12">
+                        <!-- section txt start -->
+                        <div class="intro go-left-xs">
+                            not an agency. not a studio. not a company.
+                            <br>
+                            we’re an independent, hands-on, get-it-done, collaborative dream team built on trust and a
+                            shared love for what we do. we help our creative partners get things done
+                            <br>
+                            <br>
+                            we believe that with the right people by your side, ideas grow wings and even the wildest
+                            visions take flight
+                        </div>
+                        <!-- section txt end -->
+                        <!-- divider start -->
+                        <div class="divider-m-2"></div>
+                        <!-- divider end -->
+                        <!-- section txt start -->
+                        <div
+                            class="testimonials-signature testimonials-signature-all testimonials-signature-center go-left-xs">
+                            The Ones
+                        </div>
+                        <!-- section txt end -->
+                    </div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+            </div>
+            <!-- extra margin end -->
+        </div>
+        <!-- container end -->
+    </div>
+    <!-- front page intro text end -->
+    <!-- page about start -->
+    <!-- page services start (was about) -->
+    <div class="lower-page bg-color-" id="page-services">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+                <!-- container start -->
+                <div class="container-fluid nopadding">
+                    <!-- extra margin start -->
+                    <div class="extra-margin-container">
+                        <!-- divider start -->
+                        <div class="divider-m-2"></div>
+                        <!-- divider end -->
+                        <!-- row start -->
+                        <div class="row">
+                            <!-- col start -->
+                            <div class="col-lg-12" style="display:block;text-align:left;">
+                                <!-- section title start -->
+                                <div class="section-heading section-heading-color">
+                                    <span>01.</span> the possibilities
+                                </div>
+                                <!-- section title end -->
+                                <!-- divider start -->
+                                <div class="divider-xl"></div>
+                                <!-- divider end -->
+                                <!-- section txt start -->
+                                <h1 class="section-header section-header-color" style="text-align:left;">
+                                    event production <span> event logistics</span> location scouting <span>video
+                                        production</span> </span> film production support <span>AV rental</span>
+                                    entertainment <span> keynote speaker management </span> music
+                                    production <span> photography </span> speaker support <span> talent booking </span>
+                                    </span> brand activations <span>brand ambassadors</span> </span> content creation
+                                    <span>hair/make-up</span> </span> travel/accomodation <span>transportation</span>
+                                    </span> catering/food truck rental <span>rider requests</span> </span> waste
+                                    reduction/community empowerment <span>local recommendations </span> and everything
+                                    in between...
+                                </h1>
+                            </div>
+                            <!-- col end -->
+                        </div>
+                        <!-- row end -->
+                        <!-- divider start -->
+                        <div class="divider-l"></div>
+                        <!-- divider end -->
+                        <div class="row">
+                            <!-- col start -->
+                            <div class="col-lg-12" style="display:block;text-align:left;">
+                                <!-- section title start -->
+                                <div class="section-heading section-heading-color">
+                                    <span>02.</span> the ones
+                                </div>
+                                <!-- section title end -->
+                                <!-- divider start -->
+                                <div class="divider-xl"></div>
+                                <!-- divider end -->
+                                <!-- section txt start -->
+                                <div class="carousel-item-img-wrapper carousel-item-img-wrapper-all">
+                                    <div class="owl-carousel popup-photo-gallery" id="owl-carousel-team">
+                                        <!-- section item start -->
+                                        <div class="post-box">
+                                            <!-- team item start -->
+                                            <div class="team-item">
+                                                <div class="team-item-inner">
+                                                    <div class="team-box">
+                                                        <div class="image-works">
+                                                            <div class="hover-effect hover-effect-team"></div>
+                                                            <div class="icon-works">
+                                                                <a class="popup-photo-gallery-open"
+                                                                    href="img/about/team/1.jpg" title="IMG Description">
+                                                                    <i class="iw-slide ion-plus"></i>
+                                                                </a>
+                                                            </div>
+                                                            <img alt="Img" src="img/about/team/1.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- divider start -->
+                                                <div class="team-item-divider">
+                                                </div>
+                                                <!-- divider end -->
+                                            </div>
+                                            <!-- team item end -->
+                                            <div class="post-box-inner">
+                                                <!-- divider start -->
+                                                <div class="divider-xs"></div>
+                                                <!-- divider end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner">
+                                                    Ula Woronko
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner section-title-inner-dark">
+                                                    Creative Producer
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- divider start -->
+                                                <div class="divider-m"></div>
+                                                <!-- divider end -->
+                                                <!-- section txt start -->
+                                                <div class="social-icons social-icons-dark">
+                                                    <!-- social icons start -->
+                                                    <ul>
+                                                        <li>
+                                                            <a class="ion-social-twitter"
+                                                                href="#"><span>Twitter</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-facebook"
+                                                                href="#"><span>Facebook</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-instagram"
+                                                                href="#"><span>Instagram</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- social icons end -->
+                                                </div>
+                                                <!-- section txt end -->
+                                            </div>
+                                        </div>
+                                        <!-- section item end -->
+                                        <!-- section item start -->
+                                        <div class="post-box">
+                                            <!-- team item start -->
+                                            <div class="team-item">
+                                                <div class="team-item-inner">
+                                                    <div class="team-box">
+                                                        <div class="image-works">
+                                                            <div class="hover-effect hover-effect-team"></div>
+                                                            <div class="icon-works">
+                                                                <a class="popup-photo-gallery-open"
+                                                                    href="img/about/team/2.jpg" title="IMG Description">
+                                                                    <i class="iw-slide ion-plus"></i>
+                                                                </a>
+                                                            </div>
+                                                            <img alt="Img" src="img/about/team/2.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- divider start -->
+                                                <div class="team-item-divider">
+                                                </div>
+                                                <!-- divider end -->
+                                            </div>
+                                            <!-- team item end -->
+                                            <div class="post-box-inner">
+                                                <!-- divider start -->
+                                                <div class="divider-xs"></div>
+                                                <!-- divider end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner">
+                                                    Rebecca Hemmings
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner section-title-inner-dark">
+                                                    Event Producer - Kubick Events
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- divider start -->
+                                                <div class="divider-m"></div>
+                                                <!-- divider end -->
+                                                <!-- section txt start -->
+                                                <div class="social-icons social-icons-dark">
+                                                    <!-- social icons start -->
+                                                    <ul>
+                                                        <li>
+                                                            <a class="ion-social-twitter"
+                                                                href="#"><span>Twitter</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-facebook"
+                                                                href="#"><span>Facebook</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-instagram"
+                                                                href="#"><span>Instagram</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- social icons end -->
+                                                </div>
+                                                <!-- section txt end -->
+                                            </div>
+                                        </div>
+                                        <!-- section item end -->
+... (file continues unchanged)
