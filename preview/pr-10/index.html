@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        The Ones - not an agency. not a studio. not a company.
+    </title>
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <!-- ex nihilo || September 2024 -->
+    <!-- favicon start -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <!-- favicon end -->
+    <!-- style start -->
+    <link href="css/plugins.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/mobile-fix.css" media="all" rel="stylesheet" type="text/css">
+    <!-- style end -->
+    <!-- google fonts start -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7COswald:300,400,700"
+        rel="stylesheet" type="text/css">
+    <!-- google fonts end -->
+    <style>
+        /* Development banner */
+        #dev-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            z-index: 2000;
+            letter-spacing: 1px;
+        }
+        
+        /* WhatsApp floating button */
+        #whatsapp-button {
+            position: fixed;
+            right: 1.5rem;
+            bottom: 5.5rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.25);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        #whatsapp-button:hover {
+            transform: translateY(-3px);
+            transition: transform .2s;
+        }
+
+        #whatsapp-button svg {
+            width: 26px;
+            height: 26px;
+            fill: #fff;
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            #whatsapp-button {
+                right: 1rem;
+                bottom: 6.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- development banner start -->
+    <div id="dev-banner">DEVELOPMENT</div>
+    <!-- development banner end -->
+    <!-- preloader start -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+    <!-- logo start -->
+    <a class="logo" href="#">
+        <img src="img/ones.png" alt="Logo" style="width:240px; height:auto;">
+    </a>
+    <!-- logo end -->
+    <!-- navigation start -->
+    <!-- navigation button start -->
+    <div class="round-menu-wrapper">
+        <div class="round-menu navigation-fire">
+            <span class="dot-1"></span><span class="dot-2"></span><span class="dot-3"></span>
+        </div>
+    </div>
+    <!-- navigation button end -->
+    <!-- navigation panel left start -->
+    <div class="panel-overlay-from-left">
+    </div>
+    <!-- navigation panel left end -->
+    <!-- navigation panel right start -->
+    <div class="panel-from-right">
+        <!-- navigation links start -->
+        <nav class="navigation-menu">
+            <!-- dots start -->
+            <div class="dots dots-wider">
+                <div class="the-dots the-dots-home the-dots-menu"></div>
+            </div>
+            <div class="dots-reverse dots-reverse-wider">
+                <div class="the-dots the-dots-home the-dots-menu"></div>
+            </div>
+            <!-- dots end -->
+            <!-- center container start -->
+            <div class="center-container-menu">
+                <!-- center block start -->
+                <div class="center-block-menu">
+                    <ul class="menu">
+                        <li>
+                            <a class="navigation-state" href="#page-services">Services</a>
+                        </li>
+                        <li>
+                            <a class="navigation-state" href="#page-news">News</a>
+                        </li>
+                        <li>
+                            <a class="navigation-state" href="#page-works">Works</a>
+                        </li>
+                        <li>
+                            <a class="navigation-state" href="#page-contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- center block end -->
+            </div>
+            <!-- center container end -->
+        </nav>
+        <!-- navigation links end -->
+    </div>
+    <!-- navigation panel right end -->
+    <!-- navigation end -->
+    <!-- page home start -->
+    <!-- hero bg start -->
+    <div class="upper-page" id="page-home">
+        <!-- dots start -->
+        <div class="dots dots-wider">
+            <div class="the-dots the-dots-home"></div>
+        </div>
+        <div class="dots-reverse dots-reverse-wider">
+            <div class="the-dots the-dots-home"></div>
+        </div>
+        <!-- dots end -->
+        <!-- center container start -->
+
+        <!-- center container end -->
+        <!-- scroll indicator start -->
+        <div class="scroll-indicator">
+            <div class="scroll-indicator-wrapper">
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+        <!-- scroll indicator end -->
+        <div class="hero-fullscreen">
+            <div class="hero-fullscreen-FIX">
+                <div class="hero-bg">
+                    <!-- hero slider wrapper start -->
+                    <div class="swiper-container-wrapper">
+                        <!-- swiper container start -->
+                        <div class="swiper-container swiper1">
+                            <!-- swiper wrapper start -->
+                            <div class="swiper-wrapper">
+                                <!-- swiper slider item start -->
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inner" data-swiper-parallax="50%">
+                                        <!-- swiper slider item IMG start -->
+                                        <div class="swiper-slide-inner-bg overlay" style="position:relative;">
+                                            <!-- HTML5 video URL start -->
+                                            <video playsinline autoplay muted loop
+                                                style="width:100%;height:auto;display:block;">
+                                                <source src="media/video/video.mp4" type="video/mp4">
+                                            </video>
+                                            <!-- HTML5 video URL end -->
+                                            <div id="floating-footer"
+                                                style="position:absolute;right:2.5%;bottom:2.5%;background:transparent;color:#fff;padding:0;font-size:1.1rem;font-family:inherit;text-align:right;z-index:10;">
+                                                <span id="footer-date"></span> | <span id="footer-time"></span> | <span
+                                                    id="footer-location">Barcelona</span>
+                                            </div>
+                                            <script>
+                                                // Set date and time in the floating footer
+                                                function updateFooterDateTime() {
+                                                    const now = new Date();
+                                                    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+                                                    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+                                                    document.getElementById('footer-date').textContent = now.toLocaleDateString('en-GB', dateOptions);
+                                                    document.getElementById('footer-time').textContent = now.toLocaleTimeString('en-GB', timeOptions);
+                                                }
+                                                updateFooterDateTime();
+                                                setInterval(updateFooterDateTime, 1000);
+                                            </script>
+                                        </div>
+                                        <!-- swiper slider item IMG end -->
+                                    </div>
+                                </div>
+                                <!-- swiper slider item end -->
+                            </div>
+                            <!-- swiper wrapper end -->
+                        </div>
+                        <!-- swiper container end -->
+                    </div>
+                    <!-- hero slider wrapper end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hero bg end -->
+    <!-- page home end -->
+    <!-- front page intro text start -->
+    <div class="lower-page bg-color-1" id="page-about">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-lg-12">
+                        <!-- section txt start -->
+                        <div class="intro go-left-xs">
+                            not an agency. not a studio. not a company.
+                            <br>
+                            we’re an independent, hands-on, get-it-done, collaborative dream team built on trust and a
+                            shared love for what we do. we help our creative partners get things done
+                            <br>
+                            <br>
+                            we believe that with the right people by your side, ideas grow wings and even the wildest
+                            visions take flight
+                        </div>
+                        <!-- section txt end -->
+                        <!-- divider start -->
+                        <div class="divider-m-2"></div>
+                        <!-- divider end -->
+                        <!-- section txt start -->
+                        <div
+                            class="testimonials-signature testimonials-signature-all testimonials-signature-center go-left-xs">
+                            The Ones
+                        </div>
+                        <!-- section txt end -->
+                    </div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+            </div>
+            <!-- extra margin end -->
+        </div>
+        <!-- container end -->
+    </div>
+    <!-- front page intro text end -->
+    <!-- page about start -->
+    <!-- page services start (was about) -->
+    <div class="lower-page bg-color-" id="page-services">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+                <!-- container start -->
+                <div class="container-fluid nopadding">
+                    <!-- extra margin start -->
+                    <div class="extra-margin-container">
+                        <!-- divider start -->
+                        <div class="divider-m-2"></div>
+                        <!-- divider end -->
+                        <!-- row start -->
+                        <div class="row">
+                            <!-- col start -->
+                            <div class="col-lg-12" style="display:block;text-align:left;">
+                                <!-- section title start -->
+                                <div class="section-heading section-heading-color">
+                                    <span>01.</span> the possibilities
+                                </div>
+                                <!-- section title end -->
+                                <!-- divider start -->
+                                <div class="divider-xl"></div>
+                                <!-- divider end -->
+                                <!-- section txt start -->
+                                <h1 class="section-header section-header-color" style="text-align:left;">
+                                    event production <span> event logistics</span> location scouting <span>video/film 
+                                        production support</span> </span> AV Services <span>Equipment rental</span>
+                                    entertainment <span> keynote speaker management </span> music
+                                    production <span> photography </span> speaker support <span> talent booking </span>
+                                    </span> brand activations <span>brand ambassadors</span> </span> content creation
+                                    <span>hair/make-up</span> </span> travel/accomodation <span>transportation</span>
+                                    </span> catering/food truck rental <span>rider requests</span> </span> waste
+                                    reduction/community empowerment <span>local recommendations </span> and everything
+                                    in between...
+                                </h1>
+                            </div>
+                            <!-- col end -->
+                        </div>
+                        <!-- row end -->
+                        <!-- divider start -->
+                        <div class="divider-l"></div>
+                        <!-- divider end -->
+                        <div class="row">
+                            <!-- col start -->
+                            <div class="col-lg-12" style="display:block;text-align:left;">
+                                <!-- section title start -->
+                                <div class="section-heading section-heading-color">
+                                    <span>02.</span> the ones
+                                </div>
+                                <!-- section title end -->
+                                <!-- divider start -->
+                                <div class="divider-xl"></div>
+                                <!-- divider end -->
+                                <!-- section txt start -->
+                                <div class="carousel-item-img-wrapper carousel-item-img-wrapper-all">
+                                    <div class="owl-carousel popup-photo-gallery" id="owl-carousel-team">
+                                        <!-- section item start -->
+                                        <div class="post-box">
+                                            <!-- team item start -->
+                                            <div class="team-item">
+                                                <div class="team-item-inner">
+                                                    <div class="team-box">
+                                                        <div class="image-works">
+                                                            <div class="hover-effect hover-effect-team"></div>
+                                                            <div class="icon-works">
+                                                                <a class="popup-photo-gallery-open"
+                                                                    href="img/about/team/1.jpg" title="IMG Description">
+                                                                    <i class="iw-slide ion-plus"></i>
+                                                                </a>
+                                                            </div>
+                                                            <img alt="Img" src="img/about/team/1.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- divider start -->
+                                                <div class="team-item-divider">
+                                                </div>
+                                                <!-- divider end -->
+                                            </div>
+                                            <!-- team item end -->
+                                            <div class="post-box-inner">
+                                                <!-- divider start -->
+                                                <div class="divider-xs"></div>
+                                                <!-- divider end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner">
+                                                    Ula Woronko
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner section-title-inner-dark">
+                                                    Creative Producer
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- divider start -->
+                                                <div class="divider-m"></div>
+                                                <!-- divider end -->
+                                                <!-- section txt start -->
+                                                <div class="social-icons social-icons-dark">
+                                                    <!-- social icons start -->
+                                                    <ul>
+                                                        <li>
+                                                            <a class="ion-social-twitter"
+                                                                href="#"><span>Twitter</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-facebook"
+                                                                href="#"><span>Facebook</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-instagram"
+                                                                href="#"><span>Instagram</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- social icons end -->
+                                                </div>
+                                                <!-- section txt end -->
+                                            </div>
+                                        </div>
+                                        <!-- section item end -->
+                                        <!-- section item start -->
+                                        <div class="post-box">
+                                            <!-- team item start -->
+                                            <div class="team-item">
+                                                <div class="team-item-inner">
+                                                    <div class="team-box">
+                                                        <div class="image-works">
+                                                            <div class="hover-effect hover-effect-team"></div>
+                                                            <div class="icon-works">
+                                                                <a class="popup-photo-gallery-open"
+                                                                    href="img/about/team/2.jpg" title="IMG Description">
+                                                                    <i class="iw-slide ion-plus"></i>
+                                                                </a>
+                                                            </div>
+                                                            <img alt="Img" src="img/about/team/2.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- divider start -->
+                                                <div class="team-item-divider">
+                                                </div>
+                                                <!-- divider end -->
+                                            </div>
+                                            <!-- team item end -->
+                                            <div class="post-box-inner">
+                                                <!-- divider start -->
+                                                <div class="divider-xs"></div>
+                                                <!-- divider end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner">
+                                                    Rebecca Hemmings
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner section-title-inner-dark">
+                                                    Event Producer - Kubick Events
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- divider start -->
+                                                <div class="divider-m"></div>
+                                                <!-- divider end -->
+                                                <!-- section txt start -->
+                                                <div class="social-icons social-icons-dark">
+                                                    <!-- social icons start -->
+                                                    <ul>
+                                                        <li>
+                                                            <a class="ion-social-twitter"
+                                                                href="#"><span>Twitter</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-facebook"
+                                                                href="#"><span>Facebook</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-instagram"
+                                                                href="#"><span>Instagram</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- social icons end -->
+                                                </div>
+                                                <!-- section txt end -->
+                                            </div>
+                                        </div>
+                                        <!-- section item end -->
+                                        <!-- section item start -->
+                                        <div class="post-box">
+                                            <!-- team item start -->
+                                            <div class="team-item">
+                                                <div class="team-item-inner">
+                                                    <div class="team-box">
+                                                        <div class="image-works">
+                                                            <div class="hover-effect hover-effect-team"></div>
+                                                            <div class="icon-works">
+                                                                <a class="popup-photo-gallery-open"
+                                                                    href="img/about/team/3.jpg" title="IMG Description">
+                                                                    <i class="iw-slide ion-plus"></i>
+                                                                </a>
+                                                            </div>
+                                                            <img alt="Img" src="img/about/team/3.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- divider start -->
+                                                <div class="team-item-divider">
+                                                </div>
+                                                <!-- divider end -->
+                                            </div>
+                                            <!-- team item end -->
+                                            <div class="post-box-inner">
+                                                <!-- divider start -->
+                                                <div class="divider-xs"></div>
+                                                <!-- divider end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner">
+                                                    Melissa Sonier
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner section-title-inner-dark">
+                                                    Make-Up Artist / Production Assistant
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- divider start -->
+                                                <div class="divider-m"></div>
+                                                <!-- divider end -->
+                                                <!-- section txt start -->
+                                                <div class="social-icons social-icons-dark">
+                                                    <!-- social icons start -->
+                                                    <ul>
+                                                        <li>
+                                                            <a class="ion-social-twitter"
+                                                                href="#"><span>Twitter</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-facebook"
+                                                                href="#"><span>Facebook</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-instagram"
+                                                                href="#"><span>Instagram</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- social icons end -->
+                                                </div>
+                                                <!-- section txt end -->
+                                            </div>
+                                        </div>
+                                        <!-- section item end -->
+                                        <!-- section item start -->
+                                        <div class="post-box">
+                                            <!-- team item start -->
+                                            <div class="team-item">
+                                                <div class="team-item-inner">
+                                                    <div class="team-box">
+                                                        <div class="image-works">
+                                                            <div class="hover-effect hover-effect-team"></div>
+                                                            <div class="icon-works">
+                                                                <a class="popup-photo-gallery-open"
+                                                                    href="img/about/team/4.jpg" title="IMG Description">
+                                                                    <i class="iw-slide ion-plus"></i>
+                                                                </a>
+                                                            </div>
+                                                            <img alt="Img" src="img/about/team/4.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- divider start -->
+                                                <div class="team-item-divider">
+                                                </div>
+                                                <!-- divider end -->
+                                            </div>
+                                            <!-- team item end -->
+                                            <div class="post-box-inner">
+                                                <!-- divider start -->
+                                                <div class="divider-xs"></div>
+                                                <!-- divider end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner">
+                                                    Bruna Higgins
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- section title start -->
+                                                <div class="section-title-inner section-title-inner-dark">
+                                                    Production Assistant / Coordinator
+                                                </div>
+                                                <!-- section title end -->
+                                                <!-- divider start -->
+                                                <div class="divider-m"></div>
+                                                <!-- divider end -->
+                                                <!-- section txt start -->
+                                                <div class="social-icons social-icons-dark">
+                                                    <!-- social icons start -->
+                                                    <ul>
+                                                        <li>
+                                                            <a class="ion-social-twitter"
+                                                                href="#"><span>Twitter</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-facebook"
+                                                                href="#"><span>Facebook</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="ion-social-instagram"
+                                                                href="#"><span>Instagram</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- social icons end -->
+                                                </div>
+                                                <!-- section txt end -->
+                                            </div>
+                                        </div>
+                                        <!-- section item end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col end -->
+                        </div>
+                    </div>
+                    <!-- extra margin end -->
+                </div>
+                <!-- container end -->
+            </div>
+            <!-- carousel start -->
+
+            <!-- carousel end -->
+            <!-- divider start -->
+            <div class="divider-xs"></div>
+            <!-- divider end -->
+            <!-- owl nav start -->
+            <div class="owl-nav owl-nav-custom-team"></div>
+            <!-- owl nav end -->
+        </div>
+    </div>
+    <!-- row end -->
+    <!-- divider start -->
+    <div class="divider-xl hidden-mobile-devices-s"></div>
+    <!-- divider end -->
+    </div>
+    <!-- extra margin end -->
+    </div>
+    <!-- container end -->
+    <!-- timeline wrapper start -->
+    <div class="timeline-wrapper-2"></div>
+    <!-- timeline wrapper end -->
+    </div>
+    <!-- page about team end -->
+    <!-- page about IMG start -->
+    <div class="lower-page">
+        <!-- container start -->
+    <div class="container-fluid bg-padding bg-color-3">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl visible-mobile-only"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-lg-12">
+                        <!-- section title start -->
+                        <!-- circle wrapper start -->
+
+                        <div class="animated-text-wrapper-r">
+                            <div class="animated-text-r">
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- circle wrapper end -->
+                    <!-- section title end -->
+                    <div class="divider-l"></div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl visible-mobile-only"></div>
+                <!-- divider end -->
+            </div>
+            <!-- extra margin end -->
+        </div>
+        <!-- container end -->
+        <!-- timeline wrapper start -->
+        <div class="timeline-wrapper"></div>
+        <!-- timeline wrapper end -->
+    </div>
+    <!-- page about IMG end -->
+    <!-- page about intro start -->
+    <div class="lower-page bg-color-2">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl hidden-mobile-only"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-lg-12">
+                        <!-- section txt start -->
+                        <div class="intro go-left-xs">
+                            Change this dummy text of the printing and typesetting industry.<br>
+                            Can I change this the industry's standard dummy text ever since the 1500s.
+                        </div>
+                        <!-- section txt end -->
+                        <!-- divider start -->
+                        <div class="divider-m"></div>
+                        <!-- divider end -->
+                    </div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl visible-mobile-only"></div>
+                <!-- divider end -->
+            </div>
+            <!-- extra margin end -->
+        </div>
+        <!-- container end -->
+    </div>
+    <!-- page about intro end -->
+    <!-- page about end -->
+    <!-- section txt start -->
+    <div class="card-wrapper">
+        <div class="card-inner">
+            <!-- section txt start -->
+            <div class="intro-2">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </div>
+            <!-- section txt end -->
+            <!-- divider start -->
+            <div class="divider-m"></div>
+            <!-- divider end -->
+            <!-- section txt start -->
+            <div
+                class="testimonials-signature testimonials-signature-card testimonials-signature-all testimonials-signature-left">
+                Ex Nihilo, The unknown printer
+            </div>
+            <!-- section txt end -->
+        </div>
+    </div>
+    <!-- section txt end -->
+    </div>
+    <!-- col end -->
+    </div>
+    <!-- row end -->
+    <!-- divider start -->
+    <div class="divider-xl"></div>
+    <!-- divider end -->
+    </div>
+    <!-- extra margin end -->
+    </div>
+    <!-- container end -->
+    </div>
+    <!-- page services end -->
+    <!-- page works start -->
+    <!-- page works TXT start -->
+    <div class="lower-page bg-color-2" id="page-works">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-lg-12">
+                        <!-- section title start -->
+                        <div class="section-heading section-heading">
+                            <span>03.</span> The Mindset
+                        </div>
+                        <!-- section title end -->
+                        <!-- divider start -->
+                        <div class="divider-l"></div>
+                        <!-- divider end -->
+                    </div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-lg-12">
+                        <!-- section title start -->
+                        <div class="main-text-l">
+                            <span>We are</span><br>
+                            creatively<br>
+                            <span>rooted<br>
+                            </span>in..
+                        </div>
+                        <!-- section title end -->
+                        <!-- divider start -->
+                        <div class="divider-l"></div>
+                        <!-- divider end -->
+                    </div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl visible-mobile-only"></div>
+                <!-- divider end -->
+            </div>
+            <!-- extra margin end -->
+        </div>
+        <!-- container end -->
+    </div>
+    <!-- page works TXT end -->
+    <!-- page works IMG start -->
+    <div class="lower-page bg-color-2">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl hidden-mobile-devices-s"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-md-12 works-section-col">
+                        <!-- works item 1 start -->
+                        <div class="works-section-gallery-box img-1 item item-grid-size">
+                            <div class="item-folio box-img image-works">
+                                <!-- works item hover effect start -->
+                                <div class="hover-effect hover-effect-works"></div>
+                                <!-- works item hover effect end -->
+                                <!-- works item description start -->
+                                <div class="description">
+                                    <!-- page title start -->
+                                    <h3>
+                                                        trust
+                                                    </h3>
+                                    <!-- page title end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xxs"></div>
+                                    <!-- divider end -->
+                                    <!-- page subtitle start -->
+                                    <div class="description-second">
+                                        <h4 class="post-heading-works">
+                                                            that builds lasting relationships
+                                                        </h4>
+                                    </div>
+                                    <!-- page subtitle end -->
+                                    <!-- divider start -->
+                                    <div class="divider-m-2"></div>
+                                    <!-- divider end -->
+                                </div>
+                                <!-- works item description end -->
+                                <!-- works item IMG start -->
+                                <a class="thumb-link" data-size="1279x853">
+                                    <div class="img-fullwidth-all img-fullwidth-works-1">
+                                        <video playsinline autoplay muted loop
+                                            style="width:100%;height:auto;display:block;">
+                                            <source src="media/video/Trust.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                                <!-- works item IMG end -->
+                                <!-- works item description start -->
+                                <div class="item-folio__caption">
+                                    Lorem Ipsum is simply dummy text.
+                                </div>
+                                <!-- works item description end -->
+                            </div>
+                        </div>
+                        <!-- works item 1 end -->
+                        <!-- works item 2 start -->
+                        <div class="works-section-gallery-box img-2 item item-grid-size">
+                            <div class="item-folio box-img image-works">
+                                <!-- works item hover effect start -->
+                                <div class="hover-effect hover-effect-works"></div>
+                                <!-- works item hover effect end -->
+                                <!-- works item description start -->
+                                <div class="description">
+                                    <!-- page title start -->
+                                    <h3>
+                                                        authenticity
+                                                    </h3>
+                                    <!-- page title end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xxs"></div>
+                                    <!-- divider end -->
+                                    <!-- page subtitle start -->
+                                    <div class="description-second">
+                                        <h4 class="post-heading-works">
+                                                            that cuts through the noise
+                                                        </h4>
+                                    </div>
+                                    <!-- page subtitle end -->
+                                    <!-- divider start -->
+                                    <div class="divider-m-2"></div>
+                                    <!-- divider end -->
+                                </div>
+                                <!-- works item description end -->
+                                <!-- works item IMG start -->
+                                <a class="thumb-link" data-size="1279x853">
+                                    <div class="img-fullwidth-all img-fullwidth-works-1">
+                                        <video playsinline autoplay muted loop
+                                            style="width:100%;height:auto;display:block;">
+                                            <source src="media/video/Authenticity.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                                <!-- works item IMG end -->
+                                <!-- works item description start -->
+                                <div class="item-folio__caption">
+                                    Of the printing and typesetting industry.
+                                </div>
+                                <!-- works item description end -->
+                            </div>
+                        </div>
+                        <!-- works item 2 end -->
+                        <!-- works item 3 start -->
+                        <div class="works-section-gallery-box img-3 item item-grid-size">
+                            <div class="item-folio box-img image-works">
+                                <!-- works item hover effect start -->
+                                <div class="hover-effect hover-effect-works"></div>
+                                <!-- works item hover effect end -->
+                                <!-- works item description start -->
+                                <div class="description">
+                                    <!-- page title start -->
+                                    <h3>
+                                                        connection
+                                                    </h3>
+                                    <!-- page title end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xxs"></div>
+                                    <!-- divider end -->
+                                    <!-- page subtitle start -->
+                                    <div class="description-second">
+                                        <h4 class="post-heading-works">
+                                                            that brings people together
+                                                        </h4>
+                                    </div>
+                                    <!-- page subtitle end -->
+                                    <!-- divider start -->
+                                    <div class="divider-m-2"></div>
+                                    <!-- divider end -->
+                                </div>
+                                <!-- works item description end -->
+                                <!-- works item IMG start -->
+                                <a class="thumb-link" data-size="1279x853">
+                                    <div class="img-fullwidth-all img-fullwidth-works-1">
+                                        <video playsinline autoplay muted loop
+                                            style="width:100%;height:auto;display:block;">
+                                            <source src="media/video/Connection.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                                <!-- works item IMG end -->
+                                <!-- works item description start -->
+                                <div class="item-folio__caption">
+                                    Lorem Ipsum is simply dummy text.
+                                </div>
+                                <!-- works item description end -->
+                            </div>
+                        </div>
+                        <!-- works item 3 end -->
+                        <!-- works item 4 start -->
+                        <div class="works-section-gallery-box img-4 item item-grid-size">
+                            <div class="item-folio box-img image-works">
+                                <!-- works item hover effect start -->
+                                <div class="hover-effect hover-effect-works"></div>
+                                <!-- works item hover effect end -->
+                                <!-- works item description start -->
+                                <div class="description">
+                                    <!-- page title start -->
+                                    <h3>
+                                                        diverse cultures
+                                                    </h3>
+                                    <!-- page title end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xxs"></div>
+                                    <!-- divider end -->
+                                    <!-- page subtitle start -->
+                                    <div class="description-second">
+                                        <h4 class="post-heading-works">
+                                                            that break barriers
+                                                        </h4>
+                                    </div>
+                                    <!-- page subtitle end -->
+                                    <!-- divider start -->
+                                    <div class="divider-m-2"></div>
+                                    <!-- divider end -->
+                                </div>
+                                <!-- works item description end -->
+                                <!-- works item IMG start -->
+                                <a class="thumb-link" data-size="1279x853">
+                                    <div class="img-fullwidth-all img-fullwidth-works-1">
+                                        <video playsinline autoplay muted loop
+                                            style="width:100%;height:auto;display:block;">
+                                            <source src="media/video/Diverse Cultures.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                                <!-- works item IMG end -->
+                                <!-- works item description start -->
+                                <div class="item-folio__caption">
+                                    Of the printing and typesetting industry.
+                                </div>
+                                <!-- works item description end -->
+                            </div>
+                        </div>
+                        <!-- works item 4 end -->
+                        <!-- works item 5 start -->
+                        <div class="works-section-gallery-box img-5 item item-grid-size">
+                            <div class="item-folio box-img image-works">
+                                <!-- works item hover effect start -->
+                                <div class="hover-effect hover-effect-works"></div>
+                                <!-- works item hover effect end -->
+                                <!-- works item description start -->
+                                <div class="description">
+                                    <!-- page title start -->
+                                    <h3>
+                                                        curiosity
+                                                    </h3>
+                                    <!-- page title end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xxs"></div>
+                                    <!-- divider end -->
+                                    <!-- page subtitle start -->
+                                    <div class="description-second">
+                                        <h4 class="post-heading-works">
+                                                            that values every voice
+                                                        </h4>
+                                    </div>
+                                    <!-- page subtitle end -->
+                                    <!-- divider start -->
+                                    <div class="divider-m-2"></div>
+                                    <!-- divider end -->
+                                </div>
+                                <!-- works item description end -->
+                                <!-- works item IMG start -->
+                                <a class="thumb-link" data-size="1279x853">
+                                    <div class="img-fullwidth-all img-fullwidth-works-1">
+                                        <video playsinline autoplay muted loop
+                                            style="width:100%;height:auto;display:block;">
+                                            <source src="media/video/Curiosity.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                                <!-- works item IMG end -->
+                                <!-- works item description start -->
+                                <div class="item-folio__caption">
+                                    Lorem Ipsum is simply dummy text.
+                                </div>
+                                <!-- works item description end -->
+                            </div>
+                        </div>
+                        <!-- works item 5 end -->
+                    </div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl divider-xl-works"></div>
+                <!-- divider end -->
+            </div>
+            <!-- extra margin end -->
+        </div>
+        <!-- container end -->
+    </div>
+    <!-- page works IMG end -->
+    <!-- page works end -->
+    <!-- page testimonials start -->
+    <div class="lower-page bg-color-1">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-lg-12">
+                        <!-- section txt start -->
+                        <div class="intro go-left-xs">
+                            We design experiences with<br>
+                            imagination, humor, and humanity.
+                        </div>
+                        <!-- section txt end -->
+
+                        <!-- divider start -->
+                        <div class="divider-m"></div>
+                        <!-- divider end -->
+                    </div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+            </div>
+            <!-- extra margin end -->
+        </div>
+        <!-- container end -->
+
+
+    </div>
+    <!-- page testimonials end -->
+    <!-- page testimonials start -->
+    <div class="lower-page-testimonials bg-photo testimonials overlay overlay-dark" id="page-testimonials">
+        <!-- center container start -->
+        <div class="center-container">
+            <!-- center block start -->
+            <div class="center-block">
+                <!-- container start -->
+                <div class="container-fluid nopadding">
+                    <!-- extra margin start -->
+                    <div class="extra-margin-container">
+                        <!-- row start -->
+                        <div class="row">
+                            <!-- testimonials start -->
+                            <div id="testimonials">
+                                <div class="testimonial">
+                                    <!-- divider start -->
+                                    <div class="divider-xl"></div>
+                                    <!-- divider end -->
+                                    <!-- button start -->
+                                    <div class="more-wraper-center">
+                                        <a data-lity="" href="https://www.youtube.com/watch?v=qQ_OEiMRSqQ">
+                                            <div
+                                                class="more-button-bg-center more-button-bg-center-color-rev more-button-circle">
+                                            </div>
+                                            <div class="more-button-txt-center more-button-txt-center-color-rev">
+                                                <span>Watch video</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- button end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xl"></div>
+                                    <!-- divider end -->
+                                </div>
+                            </div>
+                            <!-- testimonials end -->
+                        </div>
+                        <!-- row end -->
+                    </div>
+                    <!-- extra margin end -->
+                </div>
+                <!-- container end -->
+            </div>
+            <!-- center block end -->
+        </div>
+        <!-- center container end -->
+        <!-- waves start -->
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave-1" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave-1" x="48" y="0" fill="rgba(255, 255, 255, 0.7" />
+                <use xlink:href="#gentle-wave-1" x="48" y="3" fill="rgba(255, 255, 255, 0.5)" />
+                <use xlink:href="#gentle-wave-1" x="48" y="5" fill="rgba(255, 255, 255, 0.3)" />
+                <use xlink:href="#gentle-wave-1" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+        <!-- waves end -->
+    </div>
+    <!-- page testimonials end -->
+    <!-- page contact start -->
+    <!-- page contact intro start -->
+    <div class="lower-page bg-color-2" id="page-contact">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-lg-12">
+                        <!-- section title start -->
+                        <div class="section-heading">
+                            <span>04.</span> The info
+                        </div>
+                        <!-- section title end -->
+                    </div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-lg-12">
+                        <!-- section title start -->
+                        <div class="main-text-l">
+                            <h1 class="section-header section-header-color section-half" style="margin-bottom:0.5em;">
+                                Let's chat about your project
+                            </h1>
+                            <h1 class="section-header section-half" style="margin-bottom:0.5em; color:transparent;">
+                                or
+                            </h1>
+                            <h1 class="section-header section-header-color section-half" style="margin-top:0;">
+                                just say hey, hola, czesc, bonjour, oi
+                            </h1>
+                        </div>
+                        <!-- section title end -->
+                        <!-- divider start -->
+                        <div class="divider-l"></div>
+                        <!-- divider end -->
+                    </div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl visible-mobile-only"></div>
+                <!-- divider end -->
+            </div>
+            <!-- extra margin end -->
+        </div>
+        <!-- container end -->
+    </div>
+    <!-- page contact intro end -->
+    <!-- page contact form start -->
+    <div class="lower-page bg-color-2">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl hidden-mobile-devices-s"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- contact form start -->
+                    <div id="contact-form">
+                        <form action="contact.php" id="form" method="post" name="send">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <input class="requiredField name" id="name" name="name" placeholder="Name" type="text">
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <input class="requiredField email" id="email" name="email" placeholder="Email"
+                                    type="text">
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <input class="requiredField subject" id="subject" name="subject" placeholder="Subject"
+                                    type="text">
+                            </div>
+                            <div class="make-space">
+                                <textarea class="requiredField message" id="message" name="message"
+                                    placeholder="Message"></textarea>
+                            </div>
+                            <div>
+                                <!-- button start -->
+                                <div class="more-wraper-center more-wraper-center-form">
+                                    <div class="more-button-bg-center more-button-circle"></div>
+                                    <button class="more-button-txt-center" id="submit" type="submit">
+                                        <span>Submit</span>
+                                    </button>
+                                </div>
+                                <!-- button end -->
+                            </div>
+                        </form>
+                    </div>
+                    <!-- contact form end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+            </div>
+            <!-- extra margin end -->
+        </div>
+        <!-- container end -->
+    </div>
+    <!-- page contact form end -->
+
+    </div>
+    <!-- row end -->
+    </div>
+    <!-- page contact TXT start -->
+    <div class="lower-page bg-color-3">
+        <!-- container start -->
+        <div class="container-fluid nopadding">
+            <!-- extra margin start -->
+            <div class="extra-margin-container">
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-lg-12">
+                        <!-- section txt start -->
+                        <h1 class="section-header section-header-color section-half">
+                            Email us <span> at: </span> contact@theones.es <a class="link-effect-2 link-effect-color-2"
+                                href="contact@theothers.es" </a>
+                        </h1>
+                        <!-- section txt end -->
+                        <!-- divider start -->
+                        <div class="divider-l"></div>
+                        <!-- divider end -->
+                    </div>
+                    <!-- col end -->
+                </div>
+                <!-- row end -->
+                <!-- divider start -->
+                <div class="divider-xl"></div>
+                <!-- divider end -->
+            </div>
+            <!-- extra margin end -->
+        </div>
+        <!-- container end -->
+        <!-- credits start -->
+        <div class="bottom-credits">
+            Justex <a href="#">&copy; All Rights Reserved.</a>
+        </div>
+        <!-- credits end -->
+    </div>
+    <!-- page contact TXT end -->
+    <!-- page contact end -->
+    <!-- to top arrow start -->
+    <a href="#page-home">
+        <div class="to-top-arrow">
+            <span class="ion-ios-arrow-up"></span>
+        </div>
+    </a>
+    <!-- to top arrow end -->
+    <!-- photoSwipe background start -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button
+                        class="pswp__button pswp__button--share" title="Share"></button> <button
+                        class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button
+                        class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button
+                    class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- photoSwipe background end -->
+    <!-- scripts start -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!-- scripts end -->
+    <!-- WhatsApp floating button (inserted near end of body so it sits above page content) -->
+    <a id="whatsapp-button" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <!-- WhatsApp SVG icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .05 5.31.05 11.95c0 2.12.56 4.19 1.62 6.02L0 24l6.3-1.65a11.95 11.95 0 005.7 1.46c6.63 0 11.95-5.31 11.95-11.95 0-3.2-1.25-6.19-3.73-8.88zM12 21.06c-1.64 0-3.27-.44-4.67-1.28l-.34-.2-3.74.98.99-3.64-.21-.36A9.08 9.08 0 012.92 11.95C2.92 7.05 6.83 3.14 11.73 3.14c2.98 0 5.78 1.19 7.88 3.34 2.1 2.15 3.27 5 3.07 8.05-.18 2.4-1.24 4.67-3.26 6.35-1.99 1.65-4.62 2.49-7.42 2.49z"/>
+            <path d="M17.08 14.29c-.29-.15-1.7-.84-1.96-.94-.26-.11-.45-.16-.64.16-.19.33-.73.94-.9 1.13-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.35-1.45-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.44.12-.59.12-.12.26-.33.39-.5.13-.17.17-.29.26-.48.09-.19.04-.36-.02-.51-.06-.15-.64-1.56-.88-2.14-.23-.57-.47-.49-.64-.5-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.27.29-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.19 2.1 3.38 5.10 4.74 3.00 0.95 3.00 0.63 3.54 0.59.54-.04 1.74-.71 1.99-1.40.25-.69.25-1.28.17-1.40-.07-.11-.26-.18-.55-.33z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Build WhatsApp link — replace the phone value with your number (international format, no "+" or spaces)
+        (function(){
+            var phone = '34600000000'; // e.g. Spain +34 600000000 => 34600000000
+            var message = "Hi! I'm interested in your project. Can we chat?";
+            var link = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+            var btn = document.getElementById('whatsapp-button');
+            if(btn){ btn.setAttribute('href', link); }
+        })();
+    </script>
+</body>
+
+</html>
