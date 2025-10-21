@@ -28,6 +28,21 @@
         rel="stylesheet" type="text/css">
     <!-- google fonts end -->
     <style>
+        /* Development banner */
+        #dev-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            z-index: 2000;
+            letter-spacing: 1px;
+        }
+        
         /* WhatsApp floating button */
         #whatsapp-button {
             position: fixed;
@@ -68,6 +83,9 @@
 </head>
 
 <body>
+    <!-- development banner start -->
+    <div id="dev-banner">DEVELOPMENT</div>
+    <!-- development banner end -->
     <!-- preloader start -->
     <div class="preloader-bg"></div>
     <div id="preloader">
