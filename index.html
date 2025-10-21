@@ -27,6 +27,44 @@
         href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7COswald:300,400,700"
         rel="stylesheet" type="text/css">
     <!-- google fonts end -->
+    <style>
+        /* WhatsApp floating button */
+        #whatsapp-button {
+            position: fixed;
+            right: 1.5rem;
+            bottom: 5.5rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.25);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        #whatsapp-button:hover {
+            transform: translateY(-3px);
+            transition: transform .2s;
+        }
+
+        #whatsapp-button svg {
+            width: 26px;
+            height: 26px;
+            fill: #fff;
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            #whatsapp-button {
+                right: 1rem;
+                bottom: 6.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -775,248 +813,238 @@
                 <!-- row start -->
                 <div class="row">
                     <!-- col start -->
-                    <div class="col-lg-12">
-                        <!-- photoSwipe start -->
-                        <div class="works-section section-100vh section-gallery">
-                            <div class="container-fluid force-height no-mrg-pdg">
-                                <div class="row no-gutter">
-                                    <div class="col-md-12 works-section-col">
-                                        <!-- works item 1 start -->
-                                        <div class="works-section-gallery-box img-1 item item-grid-size">
-                                            <div class="item-folio box-img image-works">
-                                                <!-- works item hover effect start -->
-                                                <div class="hover-effect hover-effect-works"></div>
-                                                <!-- works item hover effect end -->
-                                                <!-- works item description start -->
-                                                <div class="description">
-                                                    <!-- page title start -->
-                                                    <h3>
+                    <div class="col-md-12 works-section-col">
+                        <!-- works item 1 start -->
+                        <div class="works-section-gallery-box img-1 item item-grid-size">
+                            <div class="item-folio box-img image-works">
+                                <!-- works item hover effect start -->
+                                <div class="hover-effect hover-effect-works"></div>
+                                <!-- works item hover effect end -->
+                                <!-- works item description start -->
+                                <div class="description">
+                                    <!-- page title start -->
+                                    <h3>
                                                         trust
                                                     </h3>
-                                                    <!-- page title end -->
-                                                    <!-- divider start -->
-                                                    <div class="divider-xxs"></div>
-                                                    <!-- divider end -->
-                                                    <!-- page subtitle start -->
-                                                    <div class="description-second">
-                                                        <h4 class="post-heading-works">
+                                    <!-- page title end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xxs"></div>
+                                    <!-- divider end -->
+                                    <!-- page subtitle start -->
+                                    <div class="description-second">
+                                        <h4 class="post-heading-works">
                                                             that builds lasting relationships
                                                         </h4>
-                                                    </div>
-                                                    <!-- page subtitle end -->
-                                                    <!-- divider start -->
-                                                    <div class="divider-m-2"></div>
-                                                    <!-- divider end -->
-                                                </div>
-                                                <!-- works item description end -->
-                                                <!-- works item IMG start -->
-                                                <a class="thumb-link" data-size="1279x853">
-                                                    <div class="img-fullwidth-all img-fullwidth-works-1">
-                                                        <video playsinline autoplay muted loop
-                                                            style="width:100%;height:auto;display:block;">
-                                                            <source src="media/video/Trust.mp4" type="video/mp4">
-                                                        </video>
-                                                    </div>
-                                                </a>
-                                                <!-- works item IMG end -->
-                                                <!-- works item description start -->
-                                                <div class="item-folio__caption">
-                                                    Lorem Ipsum is simply dummy text.
-                                                </div>
-                                                <!-- works item description end -->
-                                            </div>
-                                        </div>
-                                        <!-- works item 1 end -->
-                                        <!-- works item 2 start -->
-                                        <div class="works-section-gallery-box img-2 item item-grid-size">
-                                            <div class="item-folio box-img image-works">
-                                                <!-- works item hover effect start -->
-                                                <div class="hover-effect hover-effect-works"></div>
-                                                <!-- works item hover effect end -->
-                                                <!-- works item description start -->
-                                                <div class="description">
-                                                    <!-- page title start -->
-                                                    <h3>
-                                                        authenticity
-                                                    </h3>
-                                                    <!-- page title end -->
-                                                    <!-- divider start -->
-                                                    <div class="divider-xxs"></div>
-                                                    <!-- divider end -->
-                                                    <!-- page subtitle start -->
-                                                    <div class="description-second">
-                                                        <h4 class="post-heading-works">
-                                                            that cuts through the noise
-                                                        </h4>
-                                                    </div>
-                                                    <!-- page subtitle end -->
-                                                    <!-- divider start -->
-                                                    <div class="divider-m-2"></div>
-                                                    <!-- divider end -->
-                                                </div>
-                                                <!-- works item description end -->
-                                                <!-- works item IMG start -->
-                                                <a class="thumb-link" data-size="1279x853">
-                                                    <div class="img-fullwidth-all img-fullwidth-works-1">
-                                                        <video playsinline autoplay muted loop
-                                                            style="width:100%;height:auto;display:block;">
-                                                            <source src="media/video/Authenticity.mp4" type="video/mp4">
-                                                        </video>
-                                                    </div>
-                                                </a>
-                                                <!-- works item IMG end -->
-                                                <!-- works item description start -->
-                                                <div class="item-folio__caption">
-                                                    Of the printing and typesetting industry.
-                                                </div>
-                                                <!-- works item description end -->
-                                            </div>
-                                        </div>
-                                        <!-- works item 2 end -->
-                                        <!-- works item 3 start -->
-                                        <div class="works-section-gallery-box img-3 item item-grid-size">
-                                            <div class="item-folio box-img image-works">
-                                                <!-- works item hover effect start -->
-                                                <div class="hover-effect hover-effect-works"></div>
-                                                <!-- works item hover effect end -->
-                                                <!-- works item description start -->
-                                                <div class="description">
-                                                    <!-- page title start -->
-                                                    <h3>
-                                                        connection
-                                                    </h3>
-                                                    <!-- page title end -->
-                                                    <!-- divider start -->
-                                                    <div class="divider-xxs"></div>
-                                                    <!-- divider end -->
-                                                    <!-- page subtitle start -->
-                                                    <div class="description-second">
-                                                        <h4 class="post-heading-works">
-                                                            that brings people together
-                                                        </h4>
-                                                    </div>
-                                                    <!-- page subtitle end -->
-                                                    <!-- divider start -->
-                                                    <div class="divider-m-2"></div>
-                                                    <!-- divider end -->
-                                                </div>
-                                                <!-- works item description end -->
-                                                <!-- works item IMG start -->
-                                                <a class="thumb-link" data-size="1279x853">
-                                                    <div class="img-fullwidth-all img-fullwidth-works-1">
-                                                        <video playsinline autoplay muted loop
-                                                            style="width:100%;height:auto;display:block;">
-                                                            <source src="media/video/Connection.mp4" type="video/mp4">
-                                                        </video>
-                                                    </div>
-                                                </a>
-                                                <!-- works item IMG end -->
-                                                <!-- works item description start -->
-                                                <div class="item-folio__caption">
-                                                    Lorem Ipsum is simply dummy text.
-                                                </div>
-                                                <!-- works item description end -->
-                                            </div>
-                                        </div>
-                                        <!-- works item 3 end -->
-                                        <!-- works item 4 start -->
-                                        <div class="works-section-gallery-box img-4 item item-grid-size">
-                                            <div class="item-folio box-img image-works">
-                                                <!-- works item hover effect start -->
-                                                <div class="hover-effect hover-effect-works"></div>
-                                                <!-- works item hover effect end -->
-                                                <!-- works item description start -->
-                                                <div class="description">
-                                                    <!-- page title start -->
-                                                    <h3>
-                                                        diverse cultures
-                                                    </h3>
-                                                    <!-- page title end -->
-                                                    <!-- divider start -->
-                                                    <div class="divider-xxs"></div>
-                                                    <!-- divider end -->
-                                                    <!-- page subtitle start -->
-                                                    <div class="description-second">
-                                                        <h4 class="post-heading-works">
-                                                            that break barriers
-                                                        </h4>
-                                                    </div>
-                                                    <!-- page subtitle end -->
-                                                    <!-- divider start -->
-                                                    <div class="divider-m-2"></div>
-                                                    <!-- divider end -->
-                                                </div>
-                                                <!-- works item description end -->
-                                                <!-- works item IMG start -->
-                                                <a class="thumb-link" data-size="1279x853">
-                                                    <div class="img-fullwidth-all img-fullwidth-works-1">
-                                                        <video playsinline autoplay muted loop
-                                                            style="width:100%;height:auto;display:block;">
-                                                            <source src="media/video/Diverse Cultures.mp4"
-                                                                type="video/mp4">
-                                                        </video>
-                                                    </div>
-                                                </a>
-                                                <!-- works item IMG end -->
-                                                <!-- works item description start -->
-                                                <div class="item-folio__caption">
-                                                    Of the printing and typesetting industry.
-                                                </div>
-                                                <!-- works item description end -->
-                                            </div>
-                                        </div>
-                                        <!-- works item 4 end -->
-                                        <!-- works item 5 start -->
-                                        <div class="works-section-gallery-box img-5 item item-grid-size">
-                                            <div class="item-folio box-img image-works">
-                                                <!-- works item hover effect start -->
-                                                <div class="hover-effect hover-effect-works"></div>
-                                                <!-- works item hover effect end -->
-                                                <!-- works item description start -->
-                                                <div class="description">
-                                                    <!-- page title start -->
-                                                    <h3>
-                                                        curiosity
-                                                    </h3>
-                                                    <!-- page title end -->
-                                                    <!-- divider start -->
-                                                    <div class="divider-xxs"></div>
-                                                    <!-- divider end -->
-                                                    <!-- page subtitle start -->
-                                                    <div class="description-second">
-                                                        <h4 class="post-heading-works">
-                                                            that values every voice
-                                                        </h4>
-                                                    </div>
-                                                    <!-- page subtitle end -->
-                                                    <!-- divider start -->
-                                                    <div class="divider-m-2"></div>
-                                                    <!-- divider end -->
-                                                </div>
-                                                <!-- works item description end -->
-                                                <!-- works item IMG start -->
-                                                <a class="thumb-link" data-size="1279x853">
-                                                    <div class="img-fullwidth-all img-fullwidth-works-1">
-                                                        <video playsinline autoplay muted loop
-                                                            style="width:100%;height:auto;display:block;">
-                                                            <source src="media/video/Curiosity.mp4" type="video/mp4">
-                                                        </video>
-                                                    </div>
-                                                </a>
-                                                <!-- works item IMG end -->
-                                                <!-- works item description start -->
-                                                <div class="item-folio__caption">
-                                                    Lorem Ipsum is simply dummy text.
-                                                </div>
-                                                <!-- works item description end -->
-                                            </div>
-                                        </div>
-                                        <!-- works item 5 end -->
                                     </div>
+                                    <!-- page subtitle end -->
+                                    <!-- divider start -->
+                                    <div class="divider-m-2"></div>
+                                    <!-- divider end -->
                                 </div>
+                                <!-- works item description end -->
+                                <!-- works item IMG start -->
+                                <a class="thumb-link" data-size="1279x853">
+                                    <div class="img-fullwidth-all img-fullwidth-works-1">
+                                        <video playsinline autoplay muted loop
+                                            style="width:100%;height:auto;display:block;">
+                                            <source src="media/video/Trust.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                                <!-- works item IMG end -->
+                                <!-- works item description start -->
+                                <div class="item-folio__caption">
+                                    Lorem Ipsum is simply dummy text.
+                                </div>
+                                <!-- works item description end -->
                             </div>
                         </div>
-                        <!-- photoSwipe end -->
+                        <!-- works item 1 end -->
+                        <!-- works item 2 start -->
+                        <div class="works-section-gallery-box img-2 item item-grid-size">
+                            <div class="item-folio box-img image-works">
+                                <!-- works item hover effect start -->
+                                <div class="hover-effect hover-effect-works"></div>
+                                <!-- works item hover effect end -->
+                                <!-- works item description start -->
+                                <div class="description">
+                                    <!-- page title start -->
+                                    <h3>
+                                                        authenticity
+                                                    </h3>
+                                    <!-- page title end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xxs"></div>
+                                    <!-- divider end -->
+                                    <!-- page subtitle start -->
+                                    <div class="description-second">
+                                        <h4 class="post-heading-works">
+                                                            that cuts through the noise
+                                                        </h4>
+                                    </div>
+                                    <!-- page subtitle end -->
+                                    <!-- divider start -->
+                                    <div class="divider-m-2"></div>
+                                    <!-- divider end -->
+                                </div>
+                                <!-- works item description end -->
+                                <!-- works item IMG start -->
+                                <a class="thumb-link" data-size="1279x853">
+                                    <div class="img-fullwidth-all img-fullwidth-works-1">
+                                        <video playsinline autoplay muted loop
+                                            style="width:100%;height:auto;display:block;">
+                                            <source src="media/video/Authenticity.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                                <!-- works item IMG end -->
+                                <!-- works item description start -->
+                                <div class="item-folio__caption">
+                                    Of the printing and typesetting industry.
+                                </div>
+                                <!-- works item description end -->
+                            </div>
+                        </div>
+                        <!-- works item 2 end -->
+                        <!-- works item 3 start -->
+                        <div class="works-section-gallery-box img-3 item item-grid-size">
+                            <div class="item-folio box-img image-works">
+                                <!-- works item hover effect start -->
+                                <div class="hover-effect hover-effect-works"></div>
+                                <!-- works item hover effect end -->
+                                <!-- works item description start -->
+                                <div class="description">
+                                    <!-- page title start -->
+                                    <h3>
+                                                        connection
+                                                    </h3>
+                                    <!-- page title end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xxs"></div>
+                                    <!-- divider end -->
+                                    <!-- page subtitle start -->
+                                    <div class="description-second">
+                                        <h4 class="post-heading-works">
+                                                            that brings people together
+                                                        </h4>
+                                    </div>
+                                    <!-- page subtitle end -->
+                                    <!-- divider start -->
+                                    <div class="divider-m-2"></div>
+                                    <!-- divider end -->
+                                </div>
+                                <!-- works item description end -->
+                                <!-- works item IMG start -->
+                                <a class="thumb-link" data-size="1279x853">
+                                    <div class="img-fullwidth-all img-fullwidth-works-1">
+                                        <video playsinline autoplay muted loop
+                                            style="width:100%;height:auto;display:block;">
+                                            <source src="media/video/Connection.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                                <!-- works item IMG end -->
+                                <!-- works item description start -->
+                                <div class="item-folio__caption">
+                                    Lorem Ipsum is simply dummy text.
+                                </div>
+                                <!-- works item description end -->
+                            </div>
+                        </div>
+                        <!-- works item 3 end -->
+                        <!-- works item 4 start -->
+                        <div class="works-section-gallery-box img-4 item item-grid-size">
+                            <div class="item-folio box-img image-works">
+                                <!-- works item hover effect start -->
+                                <div class="hover-effect hover-effect-works"></div>
+                                <!-- works item hover effect end -->
+                                <!-- works item description start -->
+                                <div class="description">
+                                    <!-- page title start -->
+                                    <h3>
+                                                        diverse cultures
+                                                    </h3>
+                                    <!-- page title end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xxs"></div>
+                                    <!-- divider end -->
+                                    <!-- page subtitle start -->
+                                    <div class="description-second">
+                                        <h4 class="post-heading-works">
+                                                            that break barriers
+                                                        </h4>
+                                    </div>
+                                    <!-- page subtitle end -->
+                                    <!-- divider start -->
+                                    <div class="divider-m-2"></div>
+                                    <!-- divider end -->
+                                </div>
+                                <!-- works item description end -->
+                                <!-- works item IMG start -->
+                                <a class="thumb-link" data-size="1279x853">
+                                    <div class="img-fullwidth-all img-fullwidth-works-1">
+                                        <video playsinline autoplay muted loop
+                                            style="width:100%;height:auto;display:block;">
+                                            <source src="media/video/Diverse Cultures.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                                <!-- works item IMG end -->
+                                <!-- works item description start -->
+                                <div class="item-folio__caption">
+                                    Of the printing and typesetting industry.
+                                </div>
+                                <!-- works item description end -->
+                            </div>
+                        </div>
+                        <!-- works item 4 end -->
+                        <!-- works item 5 start -->
+                        <div class="works-section-gallery-box img-5 item item-grid-size">
+                            <div class="item-folio box-img image-works">
+                                <!-- works item hover effect start -->
+                                <div class="hover-effect hover-effect-works"></div>
+                                <!-- works item hover effect end -->
+                                <!-- works item description start -->
+                                <div class="description">
+                                    <!-- page title start -->
+                                    <h3>
+                                                        curiosity
+                                                    </h3>
+                                    <!-- page title end -->
+                                    <!-- divider start -->
+                                    <div class="divider-xxs"></div>
+                                    <!-- divider end -->
+                                    <!-- page subtitle start -->
+                                    <div class="description-second">
+                                        <h4 class="post-heading-works">
+                                                            that values every voice
+                                                        </h4>
+                                    </div>
+                                    <!-- page subtitle end -->
+                                    <!-- divider start -->
+                                    <div class="divider-m-2"></div>
+                                    <!-- divider end -->
+                                </div>
+                                <!-- works item description end -->
+                                <!-- works item IMG start -->
+                                <a class="thumb-link" data-size="1279x853">
+                                    <div class="img-fullwidth-all img-fullwidth-works-1">
+                                        <video playsinline autoplay muted loop
+                                            style="width:100%;height:auto;display:block;">
+                                            <source src="media/video/Curiosity.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                                <!-- works item IMG end -->
+                                <!-- works item description start -->
+                                <div class="item-folio__caption">
+                                    Lorem Ipsum is simply dummy text.
+                                </div>
+                                <!-- works item description end -->
+                            </div>
+                        </div>
+                        <!-- works item 5 end -->
                     </div>
                     <!-- col end -->
                 </div>
@@ -1335,6 +1363,25 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <!-- scripts end -->
+    <!-- WhatsApp floating button (inserted near end of body so it sits above page content) -->
+    <a id="whatsapp-button" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <!-- WhatsApp SVG icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .05 5.31.05 11.95c0 2.12.56 4.19 1.62 6.02L0 24l6.3-1.65a11.95 11.95 0 005.7 1.46c6.63 0 11.95-5.31 11.95-11.95 0-3.2-1.25-6.19-3.73-8.88zM12 21.06c-1.64 0-3.27-.44-4.67-1.28l-.34-.2-3.74.98.99-3.64-.21-.36A9.08 9.08 0 012.92 11.95C2.92 7.05 6.83 3.14 11.73 3.14c2.98 0 5.78 1.19 7.88 3.34 2.1 2.15 3.27 5 3.07 8.05-.18 2.4-1.24 4.67-3.26 6.35-1.99 1.65-4.62 2.49-7.42 2.49z"/>
+            <path d="M17.08 14.29c-.29-.15-1.7-.84-1.96-.94-.26-.11-.45-.16-.64.16-.19.33-.73.94-.9 1.13-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.35-1.45-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.44.12-.59.12-.12.26-.33.39-.5.13-.17.17-.29.26-.48.09-.19.04-.36-.02-.51-.06-.15-.64-1.56-.88-2.14-.23-.57-.47-.49-.64-.5-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.27.29-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.19 2.1 3.38 5.10 4.74 3.00 0.95 3.00 0.63 3.54 0.59.54-.04 1.74-.71 1.99-1.40.25-.69.25-1.28.17-1.40-.07-.11-.26-.18-.55-.33z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Build WhatsApp link — replace the phone value with your number (international format, no "+" or spaces)
+        (function(){
+            var phone = '34600000000'; // e.g. Spain +34 600000000 => 34600000000
+            var message = "Hi! I'm interested in your project. Can we chat?";
+            var link = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+            var btn = document.getElementById('whatsapp-button');
+            if(btn){ btn.setAttribute('href', link); }
+        })();
+    </script>
 </body>
 
 </html>
