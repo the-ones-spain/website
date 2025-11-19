@@ -708,6 +708,15 @@ height: 100%;
 display: block;
 background: none;
 overflow: hidden;
+cursor: default;
+}
+
+.works-section.section-gallery .item:hover .link-wrap {
+cursor: default;
+}
+
+.works-section.section-gallery .item:hover {
+cursor: default;
 }
 
 .works-section.section-gallery {
