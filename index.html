@@ -68,7 +68,7 @@
 </head>
 
 <body>
-    <!-- preloader start -->
+    <!-- Preloader overlay and animated loader -->
     <div class="preloader-bg"></div>
     <div id="preloader">
         <div id="preloader-status">
@@ -77,25 +77,28 @@
             </div>
         </div>
     </div>
-    <!-- preloader end -->
-    <!-- logo start -->
+    <!-- End preloader overlay -->
+
+    <!-- Brand logo (links back to top/hash) -->
     <a class="logo" href="#">
         <img src="img/ones.png" alt="Logo" style="width:240px; height:auto;">
     </a>
-    <!-- logo end -->
-    <!-- navigation start -->
-    <!-- navigation button start -->
+    <!-- End brand logo -->
+
+    <!-- Round menu toggle (opens right-side navigation panel) -->
     <div class="round-menu-wrapper">
         <div class="round-menu navigation-fire">
             <span class="dot-1"></span><span class="dot-2"></span><span class="dot-3"></span>
         </div>
     </div>
-    <!-- navigation button end -->
-    <!-- navigation panel left start -->
+    <!-- End round menu toggle -->
+
+    <!-- Left overlay used when the navigation panel is open -->
     <div class="panel-overlay-from-left">
     </div>
-    <!-- navigation panel left end -->
-    <!-- navigation panel right start -->
+    <!-- End left overlay -->
+
+    <!-- Right-side navigation panel (primary site navigation links) -->
     <div class="panel-from-right">
         <!-- navigation links start -->
         <nav class="navigation-menu">
@@ -112,18 +115,10 @@
                 <!-- center block start -->
                 <div class="center-block-menu">
                     <ul class="menu">
-                        <li>
-                            <a class="navigation-state" href="#page-services">Services</a>
-                        </li>
-                        <li>
-                            <a class="navigation-state" href="#page-news">News</a>
-                        </li>
-                        <li>
-                            <a class="navigation-state" href="#page-works">Works</a>
-                        </li>
-                        <li>
-                            <a class="navigation-state" href="#page-contact">Contact</a>
-                        </li>
+                        <li><a class="navigation-state" href="#page-services">Services</a></li>
+                        <li><a class="navigation-state" href="#page-news">News</a></li>
+                        <li><a class="navigation-state" href="#page-works">Works</a></li>
+                        <li><a class="navigation-state" href="#page-contact">Contact</a></li>
                     </ul>
                 </div>
                 <!-- center block end -->
@@ -132,53 +127,44 @@
         </nav>
         <!-- navigation links end -->
     </div>
-    <!-- navigation panel right end -->
-    <!-- navigation end -->
-    <!-- page home start -->
-    <!-- hero bg start -->
+    <!-- End right-side navigation panel -->
+
+    <!-- Hero section (fullscreen video slider with floating info) -->
     <div class="upper-page" id="page-home">
-        <!-- dots start -->
+        <!-- decorative dot patterns for hero -->
         <div class="dots dots-wider">
             <div class="the-dots the-dots-home"></div>
         </div>
         <div class="dots-reverse dots-reverse-wider">
             <div class="the-dots the-dots-home"></div>
         </div>
-        <!-- dots end -->
-        <!-- center container start -->
+        <!-- End decorative dots -->
 
-        <!-- center container end -->
-        <!-- scroll indicator start -->
+        <!-- Scroll hint / indicator -->
         <div class="scroll-indicator">
             <div class="scroll-indicator-wrapper">
                 <div class="scroll-line"></div>
             </div>
         </div>
-        <!-- scroll indicator end -->
+        <!-- End scroll indicator -->
+
         <div class="hero-fullscreen">
             <div class="hero-fullscreen-FIX">
                 <div class="hero-bg">
-                    <!-- hero slider wrapper start -->
+                    <!-- Swiper hero slider wrapper (video slides with parallax) -->
                     <div class="swiper-container-wrapper">
-                        <!-- swiper container start -->
                         <div class="swiper-container swiper1">
-                            <!-- swiper wrapper start -->
                             <div class="swiper-wrapper">
-                                <!-- swiper slider item start -->
                                 <div class="swiper-slide">
                                     <div class="swiper-slide-inner" data-swiper-parallax="50%">
-                                        <!-- swiper slider item IMG start -->
                                         <div class="swiper-slide-inner-bg overlay" style="position:relative;">
-                                            <!-- HTML5 video URL start -->
-                                            <video playsinline autoplay muted loop
-                                                style="width:100%;height:auto;display:block;">
+                                            <!-- HTML5 hero background video (muted autoplay loop) -->
+                                            <video playsinline autoplay muted loop style="width:100%;height:auto;display:block;">
                                                 <source src="media/video/video.mp4" type="video/mp4">
                                             </video>
-                                            <!-- HTML5 video URL end -->
-                                            <div id="floating-footer"
-                                                style="position:absolute;right:2.5%;bottom:2.5%;background:transparent;color:#fff;padding:0;font-size:1.1rem;font-family:inherit;text-align:right;z-index:10;">
-                                                <span id="footer-date"></span> | <span id="footer-time"></span> | <span
-                                                    id="footer-location">Barcelona</span>
+                                            <!-- Floating footer showing live date/time/location -->
+                                            <div id="floating-footer" style="position:absolute;right:2.5%;bottom:2.5%;background:transparent;color:#fff;padding:0;font-size:1.1rem;font-family:inherit;text-align:right;z-index:10;">
+                                                <span id="footer-date"></span> | <span id="footer-time"></span> | <span id="footer-location">Barcelona</span>
                                             </div>
                                             <script>
                                                 // Set date and time in the floating footer
@@ -193,36 +179,25 @@
                                                 setInterval(updateFooterDateTime, 1000);
                                             </script>
                                         </div>
-                                        <!-- swiper slider item IMG end -->
                                     </div>
                                 </div>
-                                <!-- swiper slider item end -->
                             </div>
-                            <!-- swiper wrapper end -->
                         </div>
-                        <!-- swiper container end -->
                     </div>
-                    <!-- hero slider wrapper end -->
+                    <!-- End Swiper hero slider wrapper -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- hero bg end -->
-    <!-- page home end -->
-    <!-- front page intro text start -->
+    <!-- End hero section -->
+
+    <!-- Intro text / manifesto block -->
     <div class="lower-page bg-color-1" id="page-about">
-        <!-- container start -->
         <div class="container-fluid nopadding">
-            <!-- extra margin start -->
             <div class="extra-margin-container">
-                <!-- divider start -->
                 <div class="divider-xl"></div>
-                <!-- divider end -->
-                <!-- row start -->
                 <div class="row">
-                    <!-- col start -->
                     <div class="col-lg-12">
-                        <!-- section txt start -->
                         <div class="intro go-left-xs">
                             not an agency. not a studio. not a company.
                             <br>
@@ -233,31 +208,19 @@
                             we believe that with the right people by your side, ideas grow wings and even the wildest
                             visions take flight
                         </div>
-                        <!-- section txt end -->
-                        <!-- divider start -->
                         <div class="divider-m-2"></div>
-                        <!-- divider end -->
-                        <!-- section txt start -->
-                        <div
-                            class="testimonials-signature testimonials-signature-all testimonials-signature-center go-left-xs">
+                        <div class="testimonials-signature testimonials-signature-all testimonials-signature-center go-left-xs">
                             The Ones
                         </div>
-                        <!-- section txt end -->
                     </div>
-                    <!-- col end -->
                 </div>
-                <!-- row end -->
-                <!-- divider start -->
                 <div class="divider-xl"></div>
-                <!-- divider end -->
             </div>
-            <!-- extra margin end -->
         </div>
-        <!-- container end -->
     </div>
-    <!-- front page intro text end -->
-    <!-- page about start -->
-    <!-- page services start (was about) -->
+    <!-- End intro / manifesto block -->
+
+    <!-- Services & team overview (services list and Owl Carousel team showcase) -->
     <div class="lower-page bg-color-" id="page-services">
         <!-- container start -->
         <div class="container-fluid nopadding">
@@ -288,7 +251,7 @@
                                 <!-- section txt start -->
                                 <h1 class="section-header section-header-color" style="text-align:left;">
                                     event production <span> event logistics</span> location scouting <span>video/film 
-                                        production support</span> </span> AV Services <span>Equipment rental</span>
+                                        production support</span> AV Services <span>Equipment rental</span>
                                     entertainment <span> keynote speaker management </span> music
                                     production <span> photography </span> speaker support <span> talent booking </span>
                                     </span> brand activations <span>brand ambassadors</span> </span> content creation
@@ -626,6 +589,9 @@
 
                         <div class="animated-text-wrapper-r">
                             <div class="animated-text-r">
+                                <div class="animated-text-content-r">
+                                    <span>this</span> is us.&nbsp;
+                                </div>
                                 <div class="animated-text-content-r">
                                     <span>this</span> is us.&nbsp;
                                 </div>
@@ -1068,7 +1034,7 @@
     <!-- page testimonials end -->
     <!-- page testimonials start -->
     <div class="lower-page-testimonials bg-photo testimonials overlay overlay-dark" id="page-testimonials">
-        <!-- center container start -->
+        <!-- Central watch-video CTA inside testimonial background -->
         <div class="center-container">
             <!-- center block start -->
             <div class="center-block">
@@ -1127,38 +1093,24 @@
         </svg>
         <!-- waves end -->
     </div>
-    <!-- page testimonials end -->
-    <!-- page contact start -->
-    <!-- page contact intro start -->
+    <!-- End testimonials / CTA block -->
+
+    <!-- Contact section: headings and contact form -->
     <div class="lower-page bg-color-2" id="page-contact">
-        <!-- container start -->
+        <!-- Contact header and intro -->
         <div class="container-fluid nopadding">
-            <!-- extra margin start -->
             <div class="extra-margin-container">
-                <!-- divider start -->
                 <div class="divider-xl"></div>
-                <!-- divider end -->
-                <!-- row start -->
                 <div class="row">
-                    <!-- col start -->
                     <div class="col-lg-12">
-                        <!-- section title start -->
                         <div class="section-heading">
                             <span>04.</span> The info
                         </div>
-                        <!-- section title end -->
                     </div>
-                    <!-- col end -->
                 </div>
-                <!-- row end -->
-                <!-- divider start -->
                 <div class="divider-xl"></div>
-                <!-- divider end -->
-                <!-- row start -->
                 <div class="row">
-                    <!-- col start -->
                     <div class="col-lg-12">
-                        <!-- section title start -->
                         <div class="main-text-l">
                             <h1 class="section-header section-header-color section-half" style="margin-bottom:0.5em;">
                                 Let's chat about your project
@@ -1170,169 +1122,94 @@
                                 just say hey, hola, czesc, bonjour, oi
                             </h1>
                         </div>
-                        <!-- section title end -->
-                        <!-- divider start -->
-                        <div class="divider-l"></div>
-                        <!-- divider end -->
                     </div>
-                    <!-- col end -->
                 </div>
-                <!-- row end -->
-                <!-- divider start -->
-                <div class="divider-xl visible-mobile-only"></div>
-                <!-- divider end -->
             </div>
-            <!-- extra margin end -->
         </div>
-        <!-- container end -->
-    </div>
-    <!-- page contact intro end -->
-    <!-- page contact form start -->
-    <div class="lower-page bg-color-2">
-        <!-- container start -->
-        <div class="container-fluid nopadding">
-            <!-- extra margin start -->
-            <div class="extra-margin-container">
-                <!-- divider start -->
-                <div class="divider-xl hidden-mobile-devices-s"></div>
-                <!-- divider end -->
-                <!-- row start -->
-                <div class="row">
-                    <!-- contact form start -->
-                    <div id="contact-form">
-                        <form action="contact.php" id="form" method="post" name="send">
-                            <div class="col-sm-4 col-md-4 col-lg-4">
-                                <input class="requiredField name" id="name" name="name" placeholder="Name" type="text">
-                            </div>
-                            <div class="col-sm-4 col-md-4 col-lg-4">
-                                <input class="requiredField email" id="email" name="email" placeholder="Email"
-                                    type="text">
-                            </div>
-                            <div class="col-sm-4 col-md-4 col-lg-4">
-                                <input class="requiredField subject" id="subject" name="subject" placeholder="Subject"
-                                    type="text">
-                            </div>
-                            <div class="make-space">
-                                <textarea class="requiredField message" id="message" name="message"
-                                    placeholder="Message"></textarea>
-                            </div>
-                            <div>
-                                <!-- button start -->
-                                <div class="more-wraper-center more-wraper-center-form">
-                                    <div class="more-button-bg-center more-button-circle"></div>
-                                    <button class="more-button-txt-center" id="submit" type="submit">
-                                        <span>Submit</span>
-                                    </button>
+        <!-- Contact form block -->
+        <div class="lower-page bg-color-2">
+            <!-- container start -->
+            <div class="container-fluid nopadding">
+                <!-- extra margin start -->
+                <div class="extra-margin-container">
+                    <!-- divider start -->
+                    <div class="divider-xl hidden-mobile-devices-s"></div>
+                    <!-- divider end -->
+                    <!-- row start -->
+                    <div class="row">
+                        <!-- contact form start -->
+                        <div id="contact-form">
+                            <form action="contact.php" id="form" method="post" name="send">
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <input class="requiredField name" id="name" name="name" placeholder="Name" type="text">
                                 </div>
-                                <!-- button end -->
-                            </div>
-                        </form>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <input class="requiredField email" id="email" name="email" placeholder="Email"
+                                        type="text">
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <input class="requiredField subject" id="subject" name="subject" placeholder="Subject"
+                                        type="text">
+                                </div>
+                                <div class="make-space">
+                                    <textarea class="requiredField message" id="message" name="message"
+                                        placeholder="Message"></textarea>
+                                </div>
+                                <div>
+                                    <!-- button start -->
+                                    <div class="more-wraper-center more-wraper-center-form">
+                                        <div class="more-button-bg-center more-button-circle"></div>
+                                        <button class="more-button-txt-center" id="submit" type="submit">
+                                            <span>Submit</span>
+                                        </button>
+                                    </div>
+                                    <!-- button end -->
+                                </div>
+                            </form>
+                        </div>
+                        <!-- contact form end -->
                     </div>
-                    <!-- contact form end -->
+                    <!-- row end -->
+                    <!-- divider start -->
+                    <div class="divider-xl"></div>
+                    <!-- divider end -->
                 </div>
-                <!-- row end -->
-                <!-- divider start -->
-                <div class="divider-xl"></div>
-                <!-- divider end -->
+                <!-- extra margin end -->
             </div>
-            <!-- extra margin end -->
+            <!-- container end -->
         </div>
-        <!-- container end -->
     </div>
-    <!-- page contact form end -->
+    <!-- End contact section -->
 
-    </div>
-    <!-- row end -->
-    </div>
-    <!-- page contact TXT start -->
+    <!-- Footer contact email and site credits -->
     <div class="lower-page bg-color-3">
-        <!-- container start -->
-        <div class="container-fluid nopadding">
-            <!-- extra margin start -->
-            <div class="extra-margin-container">
-                <!-- divider start -->
-                <div class="divider-xl"></div>
-                <!-- divider end -->
-                <!-- row start -->
-                <div class="row">
-                    <!-- col start -->
-                    <div class="col-lg-12">
-                        <!-- section txt start -->
-                        <h1 class="section-header section-header-color section-half">
-                            Email us <span> at: </span> contact@theones.es <a class="link-effect-2 link-effect-color-2"
-                                href="contact@theothers.es" </a>
-                        </h1>
-                        <!-- section txt end -->
-                        <!-- divider start -->
-                        <div class="divider-l"></div>
-                        <!-- divider end -->
-                    </div>
-                    <!-- col end -->
-                </div>
-                <!-- row end -->
-                <!-- divider start -->
-                <div class="divider-xl"></div>
-                <!-- divider end -->
-            </div>
-            <!-- extra margin end -->
-        </div>
-        <!-- container end -->
-        <!-- credits start -->
+        <!-- ...existing code... -->
         <div class="bottom-credits">
             Justex <a href="#">&copy; All Rights Reserved.</a>
         </div>
-        <!-- credits end -->
     </div>
-    <!-- page contact TXT end -->
-    <!-- page contact end -->
-    <!-- to top arrow start -->
+    <!-- End footer contact and credits -->
+
+    <!-- Smooth-scroll "back to top" anchor -->
     <a href="#page-home">
         <div class="to-top-arrow">
             <span class="ion-ios-arrow-up"></span>
         </div>
     </a>
-    <!-- to top arrow end -->
-    <!-- photoSwipe background start -->
+    <!-- End back-to-top anchor -->
+
+    <!-- PhotoSwipe lightbox markup (hidden) -->
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div>
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button
-                        class="pswp__button pswp__button--share" title="Share"></button> <button
-                        class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button
-                        class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div>
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button
-                    class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
-        </div>
+        <!-- ...existing code... -->
     </div>
-    <!-- photoSwipe background end -->
-    <!-- scripts start -->
+    <!-- End PhotoSwipe markup -->
+
+    <!-- Scripts: third-party plugin bundle and main initialization -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <!-- scripts end -->
-    <!-- WhatsApp floating button (inserted near end of body so it sits above page content) -->
+    <!-- End scripts -->
+
+    <!-- Floating WhatsApp quick-action button -->
     <a id="whatsapp-button" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
         <!-- WhatsApp SVG icon -->
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -1340,6 +1217,7 @@
             <path d="M17.08 14.29c-.29-.15-1.7-.84-1.96-.94-.26-.11-.45-.16-.64.16-.19.33-.73.94-.9 1.13-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.35-1.45-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.44.12-.59.12-.12.26-.33.39-.5.13-.17.17-.29.26-.48.09-.19.04-.36-.02-.51-.06-.15-.64-1.56-.88-2.14-.23-.57-.47-.49-.64-.5-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.27.29-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.19 2.1 3.38 5.10 4.74 3.00 0.95 3.00 0.63 3.54 0.59.54-.04 1.74-.71 1.99-1.40.25-.69.25-1.28.17-1.40-.07-.11-.26-.18-.55-.33z"/>
         </svg>
     </a>
+    <!-- End WhatsApp quick-action -->
 
     <script>
         // Build WhatsApp link — replace the phone value with your number (international format, no "+" or spaces)
