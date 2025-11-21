@@ -129,6 +129,28 @@
                 min-height: 200px;
             }
         }
+
+        /* Team carousel: fixed frame, preserve top of photo, crop bottom if needed */
+        #owl-carousel-team .image-works {
+            aspect-ratio: 4 / 5;
+            position: relative;
+            overflow: hidden;
+            background: #f6f6f6;
+        }
+
+        #owl-carousel-team .image-works img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center; /* preserve top; crop bottom */
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            #owl-carousel-team .image-works { aspect-ratio: 3 / 4; }
+        }
     </style>
 </head>
 
