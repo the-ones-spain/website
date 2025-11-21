@@ -64,6 +64,56 @@
                 bottom: 6.5rem;
             }
         }
+
+        /* ===== Background video fixes to avoid black bars on narrow screens =====
+           - force videos to cover their container (no letterbox)
+           - make wrappers position:relative and hide overflow
+           - give slides a reasonable min-height on small widths
+        */
+        /* Ensure hero fills the viewport so slides never show gaps */
+        .hero-fullscreen {
+            height: 100vh;
+            min-height: 320px;
+        }
+
+        /* Force swiper/slide hierarchy to fill the hero container */
+        .swiper-container.swiper1,
+        .swiper-wrapper,
+        .swiper-slide,
+        .swiper-slide-inner,
+        .swiper-slide-inner-bg {
+            height: 100% !important;
+            min-height: 0;
+        }
+
+        /* Ensure containers that hold full-width videos are positioned and clipped */
+        .hero-fullscreen,
+        .img-fullwidth-all,
+        .swiper-slide-inner-bg,
+        .item-folio {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* bg-video class used on video elements to reliably cover their parent */
+        .bg-video {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+            background: transparent !important;
+        }
+
+        /* Tweak for very narrow phones where min-height might be too tall */
+        @media (max-width: 480px) {
+            .swiper-slide-inner-bg,
+            .img-fullwidth-all {
+                min-height: 200px;
+            }
+        }
     </style>
 </head>
 
@@ -159,7 +209,7 @@
                                     <div class="swiper-slide-inner" data-swiper-parallax="50%">
                                         <div class="swiper-slide-inner-bg overlay" style="position:relative;">
                                             <!-- HTML5 hero background video (muted autoplay loop) -->
-                                            <video playsinline autoplay muted loop style="width:100%;height:auto;display:block;">
+                                            <video class="bg-video" playsinline autoplay muted loop>
                                                 <source src="media/video/video.mp4" type="video/mp4">
                                             </video>
                                             <!-- Floating footer showing live date/time/location -->
@@ -221,7 +271,7 @@
     <!-- End intro / manifesto block -->
 
     <!-- Services & team overview (services list and Owl Carousel team showcase) -->
-    <div class="lower-page bg-color-" id="page-services">
+    <div class="lower-page bg-color-1" id="page-services">
         <!-- container start -->
         <div class="container-fluid nopadding">
             <!-- extra margin start -->
@@ -789,8 +839,7 @@
                                 <!-- works item description end -->
                                 <!-- works item IMG start -->
                                 <div class="img-fullwidth-all img-fullwidth-works-1">
-                                    <video playsinline autoplay muted loop
-                                        style="width:100%;height:auto;display:block;">
+                                    <video class="bg-video" playsinline autoplay muted loop>
                                         <source src="media/video/Trust.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -833,8 +882,7 @@
                                 <!-- works item description end -->
                                 <!-- works item IMG start -->
                                 <div class="img-fullwidth-all img-fullwidth-works-1">
-                                    <video playsinline autoplay muted loop
-                                        style="width:100%;height:auto;display:block;">
+                                    <video class="bg-video" playsinline autoplay muted loop>
                                         <source src="media/video/Authenticity.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -877,8 +925,7 @@
                                 <!-- works item description end -->
                                 <!-- works item IMG start -->
                                 <div class="img-fullwidth-all img-fullwidth-works-1">
-                                    <video playsinline autoplay muted loop
-                                        style="width:100%;height:auto;display:block;">
+                                    <video class="bg-video" playsinline autoplay muted loop>
                                         <source src="media/video/Connection.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -921,8 +968,7 @@
                                 <!-- works item description end -->
                                 <!-- works item IMG start -->
                                 <div class="img-fullwidth-all img-fullwidth-works-1">
-                                    <video playsinline autoplay muted loop
-                                        style="width:100%;height:auto;display:block;">
+                                    <video class="bg-video" playsinline autoplay muted loop>
                                         <source src="media/video/Diverse Cultures.mp4"
                                             type="video/mp4">
                                     </video>
@@ -966,8 +1012,7 @@
                                 <!-- works item description end -->
                                 <!-- works item IMG start -->
                                 <div class="img-fullwidth-all img-fullwidth-works-1">
-                                    <video playsinline autoplay muted loop
-                                        style="width:100%;height:auto;display:block;">
+                                    <video class="bg-video" playsinline autoplay muted loop>
                                         <source src="media/video/Curiosity.mp4" type="video/mp4">
                                     </video>
                                 </div>
