@@ -151,6 +151,18 @@
         @media (max-width: 480px) {
             #owl-carousel-team .image-works { aspect-ratio: 3 / 4; }
         }
+
+        /* small bottom spacer to add whitespace padding below the page */
+		.page-bottom-spacer {
+			height: 60px;           /* adjust this value to increase/decrease padding */
+			width: 100%;
+			pointer-events: none;
+			background: transparent;
+		}
+
+		@media (max-width: 480px) {
+			.page-bottom-spacer { height: 40px; }
+		}
     </style>
 </head>
 
@@ -203,8 +215,7 @@
                 <div class="center-block-menu">
                     <ul class="menu">
                         <li><a class="navigation-state" href="#page-services">Services</a></li>
-                        <li><a class="navigation-state" href="#page-news">News</a></li>
-                        <li><a class="navigation-state" href="#page-works">Works</a></li>
+                        <li><a class="navigation-state" href="#page-mindset">Mindset</a></li>
                         <li><a class="navigation-state" href="#page-contact">Contact</a></li>
                     </ul>
                 </div>
@@ -782,7 +793,7 @@
     <!-- page services end -->
     <!-- page works start -->
     <!-- page works TXT start -->
-    <div class="lower-page bg-color-2" id="page-works">
+    <div class="lower-page bg-color-2" id="page-mindset">
         <!-- container start -->
         <div class="container-fluid nopadding">
             <!-- extra margin start -->
@@ -1140,7 +1151,7 @@
                                 or
                             </h1>
                             <h1 class="section-header section-header-color section-half" style="margin-top:0;">
-                                just say hey, hola, czesc, bonjour, oi
+                                just say hey, hola, cześć, bonjour, oi
                             </h1>
                         </div>
                     </div>
@@ -1154,7 +1165,8 @@
     <div class="lower-page bg-color-3">
         <!-- ...existing code... -->
         <div class="bottom-credits">
-            Justex <a href="#">&copy; All Rights Reserved.</a>
+        
+            
         </div>
     </div>
     <!-- End footer contact and credits -->
@@ -1197,6 +1209,9 @@
             if(btn){ btn.setAttribute('href', link); }
         })();
     </script>
+
+    <!-- insert spacer just before the closing body tag -->
+    <div class="page-bottom-spacer" aria-hidden="true"></div>
 </body>
 
 </html>
