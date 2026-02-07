@@ -153,16 +153,156 @@
         }
 
         /* small bottom spacer to add whitespace padding below the page */
-		.page-bottom-spacer {
-			height: 60px;           /* adjust this value to increase/decrease padding */
-			width: 100%;
-			pointer-events: none;
-			background: transparent;
-		}
+        .page-bottom-spacer {
+            height: 60px;           /* adjust this value to increase/decrease padding */
+            width: 100%;
+            pointer-events: none;
+            background: transparent;
+        }
 
-		@media (max-width: 480px) {
-			.page-bottom-spacer { height: 40px; }
-		}
+        @media (max-width: 480px) {
+            .page-bottom-spacer { height: 40px; }
+        }
+
+        /* JS-driven gallery grid styles (mobile-first) */
+        #js-gallery-root .js-gallery-grid {
+            display: grid;
+            gap: 0; /* no space between images */
+            align-items: start;
+            grid-template-columns: repeat(1, 1fr); /* mobile: 1 column */
+        }
+
+        /* Wider screens: progressively increase columns */
+        @media (min-width: 480px) {
+            #js-gallery-root .js-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 768px) {
+            #js-gallery-root .js-gallery-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (min-width: 1100px) {
+            #js-gallery-root .js-gallery-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        @media (min-width: 1400px) {
+            #js-gallery-root .js-gallery-grid { grid-template-columns: repeat(5, 1fr); }
+        }
+
+        #js-gallery-root .gallery-item .image-works {
+            aspect-ratio: 4 / 5;
+            position: relative;
+            overflow: hidden;
+            background: #f6f6f6;
+        }
+
+        /* ensure gallery item wrappers don't add spacing */
+        #js-gallery-root .js-gallery-grid .post-box,
+        #js-gallery-root .js-gallery-grid .gallery-item {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #js-gallery-root .gallery-item .image-works img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            /* On narrow phones keep a bit of gutter and switch to single-column visual rhythm */
+            #js-gallery-root .js-gallery-grid { gap: 12px; grid-template-columns: repeat(1, 1fr); }
+            #js-gallery-root .gallery-item .image-works { aspect-ratio: 3 / 4; }
+        }
+
+        /* Filter bar styles */
+        .gallery-filter { text-align: center; margin-bottom: 16px; }
+        .gallery-filter ul { list-style:none; padding:0; margin:0; display:inline-flex; gap:12px; }
+        .gallery-filter li { cursor:pointer; padding:8px 14px; border-radius:20px; background:transparent; color:inherit; border:1px solid rgba(255,255,255,0.06); font-size:0.95rem; }
+        .gallery-filter li.active { background:#fff; color:#111; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+
+        /* Overlay and hover transitions */
+        .js-gallery-grid .gallery-item { transition: transform 360ms cubic-bezier(.2,.8,.2,1), opacity 360ms; }
+        .js-gallery-grid .gallery-item.is-hidden { opacity:0; transform: translateY(8px) scale(.995); pointer-events:none; }
+
+        .gallery-item .image-works { transition: transform 360ms cubic-bezier(.2,.8,.2,1); }
+        .gallery-item .image-works:hover { transform: scale(1.02); }
+
+        .gallery-item .overlay {
+            position: absolute; inset:0; display:flex; align-items:flex-end; justify-content:flex-start; padding:14px; background:linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.45) 100%); color:#fff; opacity:0; transition: opacity 260ms;
+        }
+        .gallery-item .image-works:hover .overlay { opacity:1; }
+        .gallery-item .overlay .meta { font-size:0.95rem; }
+
+        /* Grid fallback when Isotope is not applied or causes hidden state (mobile-first) */
+        #js-gallery-root.use-grid .js-gallery-grid {
+            display: grid !important;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0;
+        }
+        @media (min-width: 480px) {
+            #js-gallery-root.use-grid .js-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 768px) {
+            #js-gallery-root.use-grid .js-gallery-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (min-width: 1100px) {
+            #js-gallery-root.use-grid .js-gallery-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        @media (min-width: 1400px) {
+            #js-gallery-root.use-grid .js-gallery-grid { grid-template-columns: repeat(5, 1fr); }
+        }
+
+        /* Ensure items are statically positioned in fallback so container height is correct */
+        #js-gallery-root.use-grid .gallery-item { position: relative !important; top: auto !important; left: auto !important; }
+        #js-gallery-root.use-grid .gallery-item .image-works img { position: absolute; inset: 0; width:100%; height:100%; }
+
+        /* Gallery tweaks: no grey hover modal, no overlay text; subtle zoom on hover */
+        /* Hide the dark overlay and meta text added in markup */
+        #js-gallery-root .overlay,
+        #js-gallery-root .overlay .meta,
+        #js-gallery-root .hover-effect {
+            display: none !important;
+        }
+
+        /* Make the clickable anchor cover the whole image (transparent) so clicking opens the lightbox */
+        #js-gallery-root .icon-works {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            display: block !important;
+            z-index: 3 !important;
+            opacity: 0 !important; /* keep it visually invisible */
+            pointer-events: auto !important;
+        }
+        #js-gallery-root .icon-works a {
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: transparent !important;
+            border: none !important;
+            color: transparent !important;
+            box-shadow: none !important;
+        }
+        #js-gallery-root .icon-works a:before,
+        #js-gallery-root .icon-works a i {
+            display: none !important;
+        }
+
+        /* Slight zoom on hover of the image only (no modal) */
+        #js-gallery-root .gallery-item .image-works { transition: transform 240ms cubic-bezier(.2,.8,.2,1); }
+        #js-gallery-root .gallery-item .image-works:hover { transform: scale(1.03); }
+
+        /* Remove any top spacing for the gallery so it sits flush under the previous section */
+        #js-gallery-root { margin-top: 0 !important; padding-top: 0 !important; }
+        #js-gallery-root > .container-fluid { padding-top: 0 !important; }
+        #js-gallery-root .extra-margin-container { padding-top: 0 !important; }
     </style>
 </head>
 
@@ -676,9 +816,7 @@
     <div class="container-fluid bg-padding bg-color-3">
             <!-- extra margin start -->
             <div class="extra-margin-container">
-                <!-- divider start -->
-                <div class="divider-xl visible-mobile-only"></div>
-                <!-- divider end -->
+                <!-- divider removed (was visible-mobile-only) -->
                 <!-- row start -->
                 <div class="row">
                     <!-- col start -->
@@ -730,9 +868,7 @@
                     <!-- col end -->
                 </div>
                 <!-- row end -->
-                <!-- divider start -->
-                <div class="divider-xl visible-mobile-only"></div>
-                <!-- divider end -->
+                <!-- divider removed (was visible-mobile-only) -->
             </div>
             <!-- extra margin end -->
         </div>
@@ -742,6 +878,21 @@
         <!-- timeline wrapper end -->
     </div>
     <!-- page about IMG end -->
+        <!-- Gallery (JS-driven) start -->
+        <div id="js-gallery-root" class="lower-page">
+            <div class="container-fluid bg-padding bg-color-3">
+                    <div class="extra-margin-container">
+                    <!-- top divider removed to make gallery sit flush -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="js-gallery-grid popup-photo-gallery"></div>
+                            <!-- top divider removed to reduce gap between carousel and gallery -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Gallery end -->
     <!-- page about intro start -->
     <div class="lower-page bg-color-2">
         <!-- container start -->
@@ -1187,6 +1338,10 @@
 
     <!-- Scripts: third-party plugin bundle and main initialization -->
     <script src="js/plugins.js"></script>
+    <!-- Vendor: imagesLoaded and Isotope for masonry layout + filtering -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="js/gallery.js"></script>
     <script src="js/main.js"></script>
     <!-- End scripts -->
 

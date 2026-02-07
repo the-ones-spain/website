@@ -1,0 +1,51 @@
+name: Build static site assets
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  package:
+    name: Package site (exclude tests & results)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (if present)
+        run: |
+          if [ -f package-lock.json ] || [ -f package.json ]; then
+            npm ci || npm install
+          else
+            echo "No package.json found — skipping npm install"
+          fi
+
+      - name: Build site (no-op)
+        run: |
+          # This repo is a static site with no build step by default.
+          # If you have a build step (e.g. a script that outputs into `dist/`),
+          # replace this step with that command (npm run build).
+          echo "No build step configured. Packaging repository files."
+
+      - id: create-archive
+        name: Create site archive (exclude tests/results)
+        run: |
+          set -e
+          TARFILE=site-build-${{ github.run_id }}.tar.gz
+          # Exclude tests and common result folders and node_modules/.git
+          tar --exclude='./tests' --exclude='./test-results' --exclude='./test-screenshots' \
+              --exclude='./node_modules' --exclude='./.git' -czf "$TARFILE" .
+          echo "archive=$TARFILE" >> "$GITHUB_OUTPUT"
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: ${{ steps.create-archive.outputs.archive }}
