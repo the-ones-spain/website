@@ -72,7 +72,7 @@ a.fn.owlCarousel.Constructor.Plugins.Animate=e}(window.Zepto||window.jQuery,wind
 
 
 // 4.2. PhotoSwipe Init
-$(function(){"use strict";var i,t,o;$(".item-folio").on("click",".ion-share",function(i){i.stopPropagation()}),$(".item-folio").on("click",".ion-link",function(i){i.stopPropagation()}),i=[],t=$(".pswp")[0],(o=$(".item-folio")).each(function(t){var o=$(this),n=o.find(".thumb-link"),e=o.find(".item-folio__title"),c=o.find(".item-folio__caption"),l="<h4>"+$.trim(e.html())+"</h4>",f=$.trim(c.html()),h=n.attr("href"),a=n.data("size").split("x"),p={src:h,w:a[0],h:a[1]};c.length>0&&(p.title=$.trim(l+f)),i.push(p)}),o.each(function(o){$(this).on("click",function(n){n.preventDefault(),new PhotoSwipe(t,PhotoSwipeUI_Default,i,{index:o,showHideOpacity:!0}).init()})})});
+$(function(){"use strict";var i,t,o;$(".item-folio").on("click",".ion-share",function(i){i.stopPropagation()}),$(".item-folio").on("click",".ion-link",function(i){i.stopPropagation()}),i=[],t=$(".pswp")[0],(o=$(".item-folio")).each(function(t){var o=$(this),n=o.find(".thumb-link");if(n.length>0){var e=o.find(".item-folio__title"),c=o.find(".item-folio__caption"),l="<h4>"+$.trim(e.html())+"</h4>",f=$.trim(c.html()),h=n.attr("href"),a=n.data("size").split("x"),p={src:h,w:a[0],h:a[1]};c.length>0&&(p.title=$.trim(l+f)),i.push(p)}}),o.each(function(o){$(this).on("click",function(n){var e=$(this).find(".thumb-link");if(e.length>0){n.preventDefault(),new PhotoSwipe(t,PhotoSwipeUI_Default,i,{index:o,showHideOpacity:!0}).init()}})})});
 
 
 // 5. Magnific Popup v1.1.0
